@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import gundam from './assets/gundam.jpg';
+import './App.scss';
+import ProjectsFloatButton from './FloatButton/ProjectsFloatButton';
+import SkillsButton from './FloatButton/SkillsButton';
+import AboutMeFloatButton from './FloatButton/AboutMeFloatButton';
+import ResumeFloatButton from './FloatButton/ResumeFloatButton';
+import SocialFloatButton from './FloatButton/SocialFloatButton';
+import CallToAction from './Cards/CallToAction';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-          this is a test
-        </a>
-      </header>
+    <div className="App" style={{ backgroundImage: `url(${gundam})` }}>
+      <img src={gundam} className="App-background" alt="logo" />
+      <div className="App-content">
+        <ProjectsFloatButton />
+        <SkillsButton />
+        <AboutMeFloatButton />
+        <ResumeFloatButton />
+        <SocialFloatButton />
+        <CallToAction />
+      </div>
+     
     </div>
   );
 }
