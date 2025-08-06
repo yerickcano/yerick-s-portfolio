@@ -27,6 +27,7 @@
     ]
   },
   "include": [
+    "types/**/*",
     "app",
     ".next/types/**/*.ts"
   ],
