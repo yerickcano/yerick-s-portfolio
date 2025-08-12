@@ -92,20 +92,36 @@
     "projectImage": "Imagen del Proyecto",
     "viewGithub": "GitHub",
     "viewDemo": "Demo en Vivo",
-    "projectsList": [
-      {
-        "title": "Plataforma E-commerce",
-        "description": "Una solución e-commerce full-stack construida con Next.js, Stripe y PostgreSQL."
+    "projectsList": {
+      "bds": {
+        "title": "Sitio de Gestión para Migración de Código",
+        "description": "Una plataforma web integral diseñada para optimizar y gestionar procesos de migración de código con flujos de trabajo automatizados y seguimiento de proyectos.",
+        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
+        "images": {
+          "alt1": "Proyecto BDS - Panel Principal",
+          "alt2": "Proyecto BDS - Interfaz de Usuario"
+        }
       },
-      {
-        "title": "App de Gestión de Tareas", 
-        "description": "Una aplicación colaborativa de gestión de tareas con actualizaciones en tiempo real."
+      "sc": {
+        "title": "Herramienta para Migración de Código",
+        "description": "Una poderosa aplicación de escritorio construida para migración eficiente de código con monitoreo en tiempo real y capacidades de despliegue automatizado.",
+        "technologies": ["React", "Node.js", "Electron", "MongoDB"],
+        "images": {
+          "alt1": "Proyecto SC - Panel de Control",
+          "alt2": "Proyecto SC - Vista de Características", 
+          "alt3": "Proyecto SC - Proceso de Migración"
+        }
       },
-      {
-        "title": "Dashboard del Clima",
-        "description": "Un dashboard responsivo del clima con pronósticos basados en ubicación."
+      "case": {
+        "title": "Portafolio Personal",
+        "description": "Un sitio web personal diseñado para mostrar mis habilidades, proyectos y experiencias. Es un sitio web simple y limpio que es fácil de navegar y entender.",
+        "technologies": ["React", "Chart.js", "API REST", "CSS3"],
+        "images": {
+          "alt1": "Proyecto Case - Página Principal",
+          "alt2": "Proyecto Case - Vista de Detalles"
+        }
       }
-    ]
+    }
   },
   "skills": {
     "title": "Habilidades y Tecnologías",

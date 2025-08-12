@@ -92,20 +92,36 @@
     "projectImage": "Project Image",
     "viewGithub": "GitHub",
     "viewDemo": "Live Demo",
-    "projectsList": [
-      {
-        "title": "E-commerce Platform",
-        "description": "A full-stack e-commerce solution built with Next.js, Stripe, and PostgreSQL."
+    "projectsList": {
+      "bds": {
+        "title": "Management Site for Code Migration",
+        "description": "A comprehensive web platform designed to streamline and manage code migration processes with automated workflows and project tracking.",
+        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
+        "images": {
+          "alt1": "BDS Project - Main Dashboard",
+          "alt2": "BDS Project - User Interface"
+        }
       },
-      {
-        "title": "Task Management App", 
-        "description": "A collaborative task management application with real-time updates."
+      "sc": {
+        "title": "Code Migration Desktop Tool",
+        "description": "A powerful desktop application built for efficient code migration with real-time monitoring and automated deployment capabilities.",
+        "technologies": ["React", "Node.js", "Electron", "MongoDB"],
+        "images": {
+          "alt1": "SC Project - Dashboard",
+          "alt2": "SC Project - Features Overview", 
+          "alt3": "SC Project - Migration Process"
+        }
       },
-      {
-        "title": "Weather Dashboard",
-        "description": "A responsive weather dashboard with location-based forecasts."
+      "case": {
+        "title": "Personal Portfolio",
+        "description": "A personal website designed to showcase my skills, projects, and experiences. It's a simple and clean website that is easy to navigate and understand.",
+        "technologies": ["React", "Chart.js", "REST API", "CSS3"],
+        "images": {
+          "alt1": "Case Project - Homepage",
+          "alt2": "Case Project - Details View"
+        }
       }
-    ]
+    }
   },
   "skills": {
     "title": "Skills & Technologies",

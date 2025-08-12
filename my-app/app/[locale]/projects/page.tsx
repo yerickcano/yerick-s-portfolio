@@ -1,32 +1,48 @@
 import { useTranslations } from 'next-intl';
+import ImageCarousel from '../../../components/ImageCarousel';
 
 export default function ProjectsPage() {
   const t = useTranslations('projects');
+  const projectsData = t.raw('projectsList');
+  
   const projects = [
     {
       id: 1,
-      title: "E-commerce Platform",
-      description: "A full-stack e-commerce solution built with Next.js, Stripe, and PostgreSQL.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "PostgreSQL"],
-      image: "/api/placeholder/400/250",
+      slug: 'bds',
+      title: projectsData.bds.title,
+      description: projectsData.bds.description,
+      technologies: projectsData.bds.technologies,
+      images: [
+        { src: "/images/projects/bds/bds1.jpg", alt: projectsData.bds.images.alt1 },
+        { src: "/images/projects/bds/bds2.jpg", alt: projectsData.bds.images.alt2 },
+      ],
       github: "https://github.com",
       demo: "https://demo.com"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates.",
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-      image: "/api/placeholder/400/250",
+      slug: 'sc',
+      title: projectsData.sc.title,
+      description: projectsData.sc.description,
+      technologies: projectsData.sc.technologies,
+      images: [
+        { src: "/images/projects/sc/sc0.png", alt: projectsData.sc.images.alt1 },
+        { src: "/images/projects/sc/sc1.png", alt: projectsData.sc.images.alt2 },
+        { src: "/images/projects/sc/sc2.png", alt: projectsData.sc.images.alt3 },
+      ],
       github: "https://github.com",
       demo: "https://demo.com"
     },
     {
       id: 3,
-      title: "Weather Dashboard",
-      description: "A responsive weather dashboard with location-based forecasts.",
-      technologies: ["React", "OpenWeather API", "Chart.js", "CSS3"],
-      image: "/api/placeholder/400/250",
+      slug: 'case',
+      title: projectsData.case.title,
+      description: projectsData.case.description,
+      technologies: projectsData.case.technologies,
+      images: [
+        { src: "/images/projects/case/case1.png", alt: projectsData.case.images.alt1 },
+        { src: "/images/projects/case/case2.png", alt: projectsData.case.images.alt2 },
+      ],
       github: "https://github.com",
       demo: "https://demo.com"
     }
@@ -44,16 +60,17 @@ export default function ProjectsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
           <div key={project.id} className="bg-surface border border-theme rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="h-48 bg-surface border-b border-theme flex items-center justify-center">
-              <span className="text-secondary">Project Image</span>
-            </div>
+            <ImageCarousel 
+              images={project.images} 
+              projectTitle={project.title}
+            />
             
             <div className="p-6">
               <h3 className="text-xl font-semibold text-primary mb-2">{project.title}</h3>
               <p className="text-secondary mb-4">{project.description}</p>
               
               <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies.map((tech) => (
+                {project.technologies.map((tech: string) => (
                   <span
                     key={tech}
                     className="px-3 py-1 border border-theme text-primary text-sm rounded-full"
@@ -62,25 +79,6 @@ export default function ProjectsPage() {
                     {tech}
                   </span>
                 ))}
-              </div>
-              
-              <div className="flex space-x-4">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-800 font-medium"
-                >
-                  GitHub
-                </a>
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-green-600 hover:text-green-800 font-medium"
-                >
-                  Live Demo
-                </a>
               </div>
             </div>
           </div>
