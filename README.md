@@ -18,19 +18,11 @@ A modern, responsive personal portfolio website showcasing my skills as a Full S
 
 ### Backend & Full Stack Skills
 - **Node.js** - Server-side JavaScript runtime
-- **Express.js** - Web application framework
-- **SQL Server** - Relational database management
-- **PostgreSQL** - Advanced open-source database
-- **MongoDB** - NoSQL database
-- **REST APIs** - RESTful web services
-- **Docker** - Containerization
-- **C#** - Backend development
+
 
 ### Tools & Services
 - **Zustand** - Lightweight state management
 - **next-intl** - Internationalization (English/Spanish)
-- **ESLint** - Code linting and formatting
-- **GitHub Pages** - Deployment and hosting
 - **AI Tools** - ChatGPT, Claude, Cursor for accelerated development
 
 ## ✨ Key Features
