@@ -30,7 +30,7 @@
     "types/**/*",
     "app",
     ".next/types/**/*.ts"
-  ],
+, "staticStyles"  ],
   "exclude": [
     "node_modules"
   ]

@@ -21,7 +21,7 @@ export default function AboutPage() {
               projects that challenge me to learn and grow as a developer.
             </p>
             <p>
-              When I'm not coding, you can find me exploring new technologies, contributing to open source 
+              When I&apos;m not coding, you can find me exploring new technologies, contributing to open source 
               projects, or sharing knowledge with the developer community.
             </p>
           </div>

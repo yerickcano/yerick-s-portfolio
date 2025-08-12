@@ -12,3 +12,28 @@ body {
   color: var(--color-text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+// Theme-aware utility classes
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.border-theme {
+  border-color: var(--color-border);
+}
+
+.text-primary-color {
+  color: var(--color-primary);
+}

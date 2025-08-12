@@ -1,0 +1,65 @@
+{
+  "homepage": {
+    "hero": {
+      "greeting": "Hola, soy",
+      "name": "Yerick Cano",
+      "description": "Un desarrollador full-stack apasionado creando experiencias web increíbles con tecnologías modernas.",
+      "primaryButton": "Ver Mi Trabajo",
+      "secondaryButton": "Contactar"
+    },
+    "features": {
+      "title": "Lo Que Hago",
+      "frontend": {
+        "title": "Desarrollo Frontend",
+        "description": "Creando interfaces de usuario hermosas y responsivas con React, Next.js y frameworks CSS modernos."
+      },
+      "backend": {
+        "title": "Desarrollo Backend", 
+        "description": "Construyendo APIs robustas y aplicaciones del lado del servidor con Node.js, bases de datos y servicios en la nube."
+      },
+      "fullstack": {
+        "title": "Soluciones Full-Stack",
+        "description": "Entregando aplicaciones web completas desde el concepto hasta el despliegue con las mejores prácticas modernas."
+      }
+    },
+    "caseStudy": {
+      "title": "Caso de Estudio: Construyendo Este Portafolio",
+      "techStack": {
+        "title": "Stack Tecnológico y Arquitectura",
+        "items": {
+          "nextjs": "Next.js 15 con App Router para desarrollo React moderno",
+          "typescript": "TypeScript para seguridad de tipos y mejor experiencia de desarrollo", 
+          "tailwind": "Tailwind CSS v4 con propiedades CSS personalizadas para temas",
+          "scss": "Módulos SCSS para estilos organizados y con alcance de componente",
+          "headlessui": "Headless UI para componentes accesibles sin estilos"
+        }
+      },
+      "features": {
+        "title": "Características Clave Implementadas",
+        "themeSystem": {
+          "title": "🎨 Sistema de Temas Dinámico",
+          "description": "Gestión de temas personalizada con variables CSS, soportando temas claro, oscuro y púrpura con implementación segura para SSR."
+        },
+        "responsive": {
+          "title": "📱 Diseño Responsivo", 
+          "description": "Enfoque mobile-first con utilidades responsivas de Tailwind, asegurando experiencia óptima en todos los dispositivos."
+        },
+        "architecture": {
+          "title": "🏗️ Arquitectura Escalable",
+          "description": "Estructura de archivos organizada con estilos separados, componentes reutilizables y TypeScript para mantenibilidad."
+        }
+      },
+      "footer": {
+        "description": "Este portafolio demuestra prácticas modernas de desarrollo web y atención a la experiencia del usuario.",
+        "sourceButton": "Ver Código Fuente",
+        "projectsButton": "Ver Más Proyectos"
+      }
+    }
+  },
+  "theme": {
+    "label": "Tema:",
+    "light": "claro",
+    "dark": "oscuro", 
+    "purple": "púrpura"
+  }
+}

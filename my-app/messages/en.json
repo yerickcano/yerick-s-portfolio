@@ -1,0 +1,65 @@
+{
+  "homepage": {
+    "hero": {
+      "greeting": "Hi, I'm",
+      "name": "Yerick Cano",
+      "description": "A passionate full-stack developer creating amazing web experiences with modern technologies.",
+      "primaryButton": "View My Work",
+      "secondaryButton": "Get In Touch"
+    },
+    "features": {
+      "title": "What I Do",
+      "frontend": {
+        "title": "Frontend Development",
+        "description": "Creating beautiful, responsive user interfaces with React, Next.js, and modern CSS frameworks."
+      },
+      "backend": {
+        "title": "Backend Development", 
+        "description": "Building robust APIs and server-side applications with Node.js, databases, and cloud services."
+      },
+      "fullstack": {
+        "title": "Full-Stack Solutions",
+        "description": "Delivering complete web applications from concept to deployment with modern best practices."
+      }
+    },
+    "caseStudy": {
+      "title": "Case Study: Building This Portfolio",
+      "techStack": {
+        "title": "Tech Stack & Architecture",
+        "items": {
+          "nextjs": "Next.js 15 with App Router for modern React development",
+          "typescript": "TypeScript for type safety and better development experience", 
+          "tailwind": "Tailwind CSS v4 with CSS custom properties for theming",
+          "scss": "SCSS Modules for organized, component-scoped styling",
+          "headlessui": "Headless UI for accessible, unstyled components"
+        }
+      },
+      "features": {
+        "title": "Key Features Implemented",
+        "themeSystem": {
+          "title": "🎨 Dynamic Theme System",
+          "description": "Custom theme management with CSS variables, supporting light, dark, and purple themes with SSR-safe implementation."
+        },
+        "responsive": {
+          "title": "📱 Responsive Design", 
+          "description": "Mobile-first approach with Tailwind's responsive utilities, ensuring optimal experience across all devices."
+        },
+        "architecture": {
+          "title": "🏗️ Scalable Architecture",
+          "description": "Organized file structure with separated styles, reusable components, and TypeScript for maintainability."
+        }
+      },
+      "footer": {
+        "description": "This portfolio showcases modern web development practices and attention to user experience.",
+        "sourceButton": "View Source Code",
+        "projectsButton": "See More Projects"
+      }
+    }
+  },
+  "theme": {
+    "label": "Theme:",
+    "light": "light",
+    "dark": "dark", 
+    "purple": "purple"
+  }
+}
