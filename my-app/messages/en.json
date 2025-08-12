@@ -16,23 +16,23 @@
     "hero": {
       "greeting": "Hi, I'm",
       "name": "Yerick Cano",
-      "description": "A passionate full-stack developer creating amazing web experiences with modern technologies.",
+      "description": "A Software Engineer specializing in Full Stack Development, leveraging AI tools to deliver faster, higher-quality solutions.",
       "primaryButton": "View My Work",
       "secondaryButton": "Get In Touch"
     },
     "features": {
       "title": "What I Do",
       "frontend": {
-        "title": "Frontend Development",
-        "description": "Creating beautiful, responsive user interfaces with React, Next.js, and modern CSS frameworks."
+        "title": "Full Stack Development",
+        "description": "Building modern, responsive web applications with React, Next.js, and cutting-edge technologies, optimized for performance and user experience."
       },
-      "backend": {
-        "title": "Backend Development", 
-        "description": "Building robust APIs and server-side applications with Node.js, databases, and cloud services."
+      "ai": {
+        "title": "AI-Accelerated Development", 
+        "description": "Leveraging AI tools like ChatGPT, Claude, and Cursor to accelerate development cycles, improve code quality, and deliver solutions faster."
       },
-      "fullstack": {
-        "title": "Full-Stack Solutions",
-        "description": "Delivering complete web applications from concept to deployment with modern best practices."
+      "engineering": {
+        "title": "Software Engineering",
+        "description": "Applying engineering principles to create scalable, maintainable solutions with modern development practices and clean architecture."
       }
     },
     "caseStudy": {
@@ -71,20 +71,21 @@
   },
   "about": {
     "title": "About Me",
-    "subtitle": "Learn more about my background, skills, and passion for creating amazing web experiences.",
+    "subtitle": "Learn more about my background as a Software Engineer and my expertise in AI-accelerated web development.",
     "myStory": "My Story",
     "story": {
-      "paragraph1": "I'm a passionate web developer with expertise in modern technologies like React, Next.js, and Tailwind CSS. I love creating user-friendly applications that solve real-world problems.",
-      "paragraph2": "With a background in both frontend and backend development, I enjoy working on full-stack projects that challenge me to learn and grow as a developer.",
-      "paragraph3": "When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or sharing knowledge with the developer community."
+      "paragraph1": "I'm a Software Engineer specializing in Full Stack Development with expertise in React, Next.js, Node.js, databases, and modern web technologies. I'm passionate about creating efficient, user-centered applications that solve real-world problems.",
+      "paragraph2": "What sets me apart is my proficiency with AI development tools like ChatGPT, Claude, and Cursor. I leverage these tools to accelerate my development process, improve code quality, and deliver solutions faster than traditional methods.",
+      "paragraph3": "I believe in the power of AI-human collaboration in software engineering. By combining engineering principles with AI assistance, I create scalable, maintainable solutions while staying at the forefront of modern development practices."
     },
     "quickFacts": "Quick Facts",
     "facts": [
-      "Full-stack Developer",
-      "React & Next.js Enthusiast", 
-      "Open Source Contributor",
-      "Problem Solver"
-    ]
+      "Software Engineer",
+      "Full Stack Development Specialist", 
+      "AI Tools Expert (ChatGPT, Claude, Cursor)",
+      "Performance & Quality Focused"
+    ],
+    "downloadCV": "Download CV"
   },
   "projects": {
     "title": "My Projects",
@@ -96,7 +97,7 @@
       "bds": {
         "title": "Management Site for Code Migration",
         "description": "A comprehensive web platform designed to streamline and manage code migration processes with automated workflows and project tracking.",
-        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
+        "technologies": ["Next.js", "TypeScript", "SCSS", "Node.js", "React.js", "Docker", "SQL Server", "C#"],
         "images": {
           "alt1": "BDS Project - Main Dashboard",
           "alt2": "BDS Project - User Interface"
@@ -105,7 +106,7 @@
       "sc": {
         "title": "Code Migration Desktop Tool",
         "description": "A powerful desktop application built for efficient code migration with real-time monitoring and automated deployment capabilities.",
-        "technologies": ["React", "Node.js", "Electron", "MongoDB"],
+        "technologies": ["React.js", "Node.js", "Electron", "SQL Server", "SCSS", "C#", "TypeScript"],
         "images": {
           "alt1": "SC Project - Dashboard",
           "alt2": "SC Project - Features Overview", 
@@ -115,7 +116,7 @@
       "case": {
         "title": "Personal Portfolio",
         "description": "A personal website designed to showcase my skills, projects, and experiences. It's a simple and clean website that is easy to navigate and understand.",
-        "technologies": ["React", "Chart.js", "REST API", "CSS3"],
+        "technologies": ["React.js", "Next.js", "Tailwind CSS", "TypeScript", "Figma", "AI Tools"],
         "images": {
           "alt1": "Case Project - Homepage",
           "alt2": "Case Project - Details View"
@@ -134,37 +135,41 @@
     "otherSkills": "Other Skills & Interests",
     "additionalSkills": [
       "Responsive Design",
-      "Performance Optimization", 
-      "Testing (Jest, Cypress)",
+      "Data Visualization", 
+      "Testing (Jest, Playwright)",
       "Agile Methodologies",
       "UI/UX Design",
-      "SEO Optimization",
-      "Progressive Web Apps",
-      "Accessibility (a11y)"
+      "AI tools (ChatGPT, Cursor, Claude)",
+      "Mobile First",
+      "Color Theory"
     ],
     "currentlyLearning": "Currently Learning",
     "learningDescription": "I believe in continuous learning and staying up-to-date with the latest technologies.",
-    "learningTech": ["Three.js", "React Native", "Kubernetes", "Machine Learning"]
+    "learningTech": ["Python", "Streamlit", "AWS", "Azure", "Figma"]
   },
   "contact": {
     "title": "Get In Touch",
     "subtitle": "I'd love to hear from you! Whether you have a project in mind or just want to connect.",
-    "sendMessage": "Send a Message",
-    "form": {
-      "name": "Name",
-      "namePlaceholder": "Your name",
-      "email": "Email",
-      "emailPlaceholder": "your@email.com",
-      "subject": "Subject", 
-      "subjectPlaceholder": "What's this about?",
-      "message": "Message",
-      "messagePlaceholder": "Tell me about your project or just say hello!",
-      "sendButton": "Send Message"
-    },
-    "contactInfo": "Contact Information",
+    "availabilitySection": "Availability & CV",
     "availability": "I'm currently available for freelance work and interesting projects.",
     "responseTime": "I typically respond within 24 hours.",
-    "social": "Connect with me"
+    "downloadCV": "Download CV",
+    "contactInfo": "Contact Information",
+    "social": "Connect with me",
+    "contactMethods": {
+      "email": {
+        "title": "Email",
+        "description": "Send me a direct message"
+      },
+      "linkedin": {
+        "title": "LinkedIn", 
+        "description": "Connect with me professionally"
+      },
+      "github": {
+        "title": "GitHub",
+        "description": "Check out my code repositories"
+      }
+    }
   },
   "theme": {
     "label": "Theme:",

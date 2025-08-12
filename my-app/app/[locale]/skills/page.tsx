@@ -7,23 +7,23 @@ export default function SkillsPage() {
     {
       title: t('categories.frontend'),
       skills: [
-        { name: "React", level: 90 },
-        { name: "Next.js", level: 85 },
+        { name: "React", level: 85 },
+        { name: "Next.js", level: 75 },
         { name: "TypeScript", level: 80 },
-        { name: "Tailwind CSS", level: 90 },
-        { name: "JavaScript", level: 95 },
-        { name: "HTML5/CSS3", level: 95 }
+        { name: "Tailwind CSS", level: 70 },
+        { name: "JavaScript", level: 75 },
+        { name: "HTML5/CSS3", level: 80 }
       ]
     },
     {
       title: t('categories.backend'),
       skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Express.js", level: 80 },
-        { name: "PostgreSQL", level: 75 },
-        { name: "MongoDB", level: 70 },
-        { name: "REST APIs", level: 90 },
-        { name: "GraphQL", level: 65 }
+        { name: "Node.js", level: 70 },
+        { name: "Express.js", level: 35 },
+        { name: "PostgreSQL", level: 50 },
+        { name: "MongoDB", level: 50 },
+        { name: "REST APIs", level: 50 },
+        { name: "Snowflake", level: 65 }
       ]
     },
     {
@@ -31,10 +31,10 @@ export default function SkillsPage() {
       skills: [
         { name: "Git", level: 90 },
         { name: "Docker", level: 70 },
-        { name: "AWS", level: 65 },
-        { name: "Vercel", level: 85 },
-        { name: "Figma", level: 75 },
-        { name: "VS Code", level: 95 }
+        { name: "AWS", level: 25 },
+        { name: "Cursor", level: 60 },
+        { name: "Figma", level: 25 },
+        { name: "VS Code", level: 80 }
       ]
     }
   ];

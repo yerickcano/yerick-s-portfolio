@@ -45,7 +45,7 @@ export default function HomePage() {
         <div className={styles.featuresGrid}>
           <div className={styles.featuresItem}>
             <div className={styles.featuresItemIcon}>
-              <span className="text-2xl">🎨</span>
+              <span className="text-2xl">💻</span>
             </div>
             <h3 className={`${styles.featuresItemTitle} text-primary`}>{t('features.frontend.title')}</h3>
             <p className='text-secondary'>
@@ -55,21 +55,21 @@ export default function HomePage() {
           
           <div className={styles.featuresItem}>
             <div className={styles.featuresItemIcon}>
-              <span className="text-2xl">⚙️</span>
+              <span className="text-2xl">🤖</span>
             </div>
-              <h3 className={`${styles.featuresItemTitle} text-primary`}>{t('features.backend.title')}</h3>
+              <h3 className={`${styles.featuresItemTitle} text-primary`}>{t('features.ai.title')}</h3>
             <p className='text-secondary'>
-              {t('features.backend.description')}
+              {t('features.ai.description')}
             </p>
           </div>
           
           <div className={styles.featuresItem}>
             <div className={styles.featuresItemIcon}>
-              <span className="text-2xl">📱</span>
+              <span className="text-2xl">🏗️</span>
             </div>
-                         <h3 className={`${styles.featuresItemTitle} text-primary`}>{t('features.fullstack.title')}</h3>
+                         <h3 className={`${styles.featuresItemTitle} text-primary`}>{t('features.engineering.title')}</h3>
             <p className='text-secondary'>
-              {t('features.fullstack.description')}
+              {t('features.engineering.description')}
             </p>
           </div>
         </div>
@@ -163,7 +163,7 @@ export default function HomePage() {
             <div className={styles.caseStudyFooterButtons}>
               <Button
                 as={Link}
-                href="https://github.com"
+                href="https://github.com/yerickcano/yerick-s-portfolio"
                 className="button-primary"
                 target="_blank"
                 rel="noopener noreferrer"

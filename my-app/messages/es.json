@@ -16,23 +16,23 @@
     "hero": {
       "greeting": "Hola, soy",
       "name": "Yerick Cano",
-      "description": "Un desarrollador full-stack apasionado creando experiencias web increíbles con tecnologías modernas.",
+      "description": "Ingeniero de Software especializado en Desarrollo Full Stack, utilizando herramientas de IA para entregar soluciones más rápidas y de mayor calidad.",
       "primaryButton": "Ver Mi Trabajo",
       "secondaryButton": "Contactar"
     },
     "features": {
       "title": "Lo Que Hago",
       "frontend": {
-        "title": "Desarrollo Frontend",
-        "description": "Creando interfaces de usuario hermosas y responsivas con React, Next.js y frameworks CSS modernos."
+        "title": "Desarrollo Full Stack",
+        "description": "Construyendo aplicaciones web modernas y responsivas con React, Next.js y tecnologías de vanguardia, optimizadas para rendimiento y experiencia de usuario."
       },
-      "backend": {
-        "title": "Desarrollo Backend", 
-        "description": "Construyendo APIs robustas y aplicaciones del lado del servidor con Node.js, bases de datos y servicios en la nube."
+      "ai": {
+        "title": "Desarrollo Acelerado con IA", 
+        "description": "Aprovechando herramientas de IA como ChatGPT, Claude y Cursor para acelerar los ciclos de desarrollo, mejorar la calidad del código y entregar soluciones más rápido."
       },
-      "fullstack": {
-        "title": "Soluciones Full-Stack",
-        "description": "Entregando aplicaciones web completas desde el concepto hasta el despliegue con las mejores prácticas modernas."
+      "engineering": {
+        "title": "Ingeniería de Software",
+        "description": "Aplicando principios de ingeniería para crear soluciones escalables y mantenibles con prácticas de desarrollo modernas y arquitectura limpia."
       }
     },
     "caseStudy": {
@@ -71,20 +71,21 @@
   },
   "about": {
     "title": "Acerca de Mí",
-    "subtitle": "Conoce más sobre mi experiencia, habilidades y pasión por crear experiencias web increíbles.",
+    "subtitle": "Conoce más sobre mi experiencia como Ingeniero de Software y mi expertise en desarrollo web acelerado con IA.",
     "myStory": "Mi Historia",
     "story": {
-      "paragraph1": "Soy un desarrollador web apasionado con experiencia en tecnologías modernas como React, Next.js y Tailwind CSS. Me encanta crear aplicaciones fáciles de usar que resuelven problemas del mundo real.",
-      "paragraph2": "Con experiencia tanto en desarrollo frontend como backend, disfruto trabajar en proyectos full-stack que me desafían a aprender y crecer como desarrollador.",
-      "paragraph3": "Cuando no estoy programando, puedes encontrarme explorando nuevas tecnologías, contribuyendo a proyectos de código abierto, o compartiendo conocimiento con la comunidad de desarrolladores."
+      "paragraph1": "Soy un Ingeniero de Software especializado en Desarrollo Full Stack con expertise en React, Next.js, Node.js, bases de datos y tecnologías web modernas. Me apasiona crear aplicaciones eficientes y centradas en el usuario que resuelven problemas del mundo real.",
+      "paragraph2": "Lo que me distingue es mi competencia con herramientas de desarrollo de IA como ChatGPT, Claude y Cursor. Aprovecho estas herramientas para acelerar mi proceso de desarrollo, mejorar la calidad del código y entregar soluciones más rápido que los métodos tradicionales.",
+      "paragraph3": "Creo en el poder de la colaboración IA-humano en la ingeniería de software. Al combinar principios de ingeniería con asistencia de IA, creo soluciones escalables y mantenibles mientras me mantengo a la vanguardia de las prácticas de desarrollo modernas."
     },
     "quickFacts": "Datos Rápidos",
     "facts": [
-      "Desarrollador Full-stack",
-      "Entusiasta de React y Next.js", 
-      "Colaborador de Código Abierto",
-      "Solucionador de Problemas"
-    ]
+      "Ingeniero de Software",
+      "Especialista en Desarrollo Full Stack", 
+      "Experto en Herramientas de IA (ChatGPT, Claude, Cursor)",
+      "Enfocado en Rendimiento y Calidad"
+    ],
+    "downloadCV": "Descargar CV"
   },
   "projects": {
     "title": "Mis Proyectos",
@@ -96,7 +97,7 @@
       "bds": {
         "title": "Sitio de Gestión para Migración de Código",
         "description": "Una plataforma web integral diseñada para optimizar y gestionar procesos de migración de código con flujos de trabajo automatizados y seguimiento de proyectos.",
-        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
+        "technologies":["Next.js", "TypeScript", "SCSS", "Node.js", "React.js", "Docker", "SQL Server", "C#"],
         "images": {
           "alt1": "Proyecto BDS - Panel Principal",
           "alt2": "Proyecto BDS - Interfaz de Usuario"
@@ -105,7 +106,7 @@
       "sc": {
         "title": "Herramienta para Migración de Código",
         "description": "Una poderosa aplicación de escritorio construida para migración eficiente de código con monitoreo en tiempo real y capacidades de despliegue automatizado.",
-        "technologies": ["React", "Node.js", "Electron", "MongoDB"],
+        "technologies": ["React.js", "Node.js", "Electron", "SQL Server", "SCSS", "C#", "TypeScript"],
         "images": {
           "alt1": "Proyecto SC - Panel de Control",
           "alt2": "Proyecto SC - Vista de Características", 
@@ -115,7 +116,7 @@
       "case": {
         "title": "Portafolio Personal",
         "description": "Un sitio web personal diseñado para mostrar mis habilidades, proyectos y experiencias. Es un sitio web simple y limpio que es fácil de navegar y entender.",
-        "technologies": ["React", "Chart.js", "API REST", "CSS3"],
+        "technologies": ["React.js", "Next.js", "Tailwind CSS", "TypeScript", "Figma", "Herramientas IA"],
         "images": {
           "alt1": "Proyecto Case - Página Principal",
           "alt2": "Proyecto Case - Vista de Detalles"
@@ -134,13 +135,13 @@
     "otherSkills": "Otras Habilidades e Intereses",
     "additionalSkills": [
       "Diseño Responsivo",
-      "Optimización de Rendimiento", 
-      "Testing (Jest, Cypress)",
+      "Visualización de Datos", 
+      "Testing (Jest, Playwright)",
       "Metodologías Ágiles",
       "Diseño UI/UX",
-      "Optimización SEO",
-      "Aplicaciones Web Progresivas",
-      "Accesibilidad (a11y)"
+      "IA (ChatGPT, Cursor, Claude)",
+      "Mobile First",
+      "Teoría del Color"
     ],
     "currentlyLearning": "Actualmente Aprendiendo",
     "learningDescription": "Creo en el aprendizaje continuo y mantenerme actualizado con las últimas tecnologías.",
@@ -149,22 +150,26 @@
   "contact": {
     "title": "Contáctame",
     "subtitle": "¡Me encantaría saber de ti! Ya sea que tengas un proyecto en mente o solo quieras conectar.",
-    "sendMessage": "Enviar Mensaje",
-    "form": {
-      "name": "Nombre",
-      "namePlaceholder": "Tu nombre",
-      "email": "Email",
-      "emailPlaceholder": "tu@email.com",
-      "subject": "Asunto", 
-      "subjectPlaceholder": "¿De qué se trata?",
-      "message": "Mensaje",
-      "messagePlaceholder": "¡Cuéntame sobre tu proyecto o simplemente saluda!",
-      "sendButton": "Enviar Mensaje"
-    },
-    "contactInfo": "Información de Contacto",
+    "availabilitySection": "Disponibilidad y CV",
     "availability": "Actualmente estoy disponible para trabajo freelance y proyectos interesantes.",
     "responseTime": "Típicamente respondo dentro de 24 horas.",
-    "social": "Conéctate conmigo"
+    "downloadCV": "Descargar CV",
+    "contactInfo": "Información de Contacto",
+    "social": "Conéctate conmigo",
+    "contactMethods": {
+      "email": {
+        "title": "Email",
+        "description": "Envíame un mensaje directo"
+      },
+      "linkedin": {
+        "title": "LinkedIn", 
+        "description": "Conéctate conmigo"
+      },
+      "github": {
+        "title": "GitHub",
+        "description": "Revisa mis repositorios"
+      }
+    }
   },
   "theme": {
     "label": "Tema:",
