@@ -1,7 +1,11 @@
+import { useTranslations } from 'next-intl';
+
 export default function SkillsPage() {
+  const t = useTranslations('skills');
+  
   const skillCategories = [
     {
-      title: "Frontend Development",
+      title: t('categories.frontend'),
       skills: [
         { name: "React", level: 90 },
         { name: "Next.js", level: 85 },
@@ -12,7 +16,7 @@ export default function SkillsPage() {
       ]
     },
     {
-      title: "Backend Development",
+      title: t('categories.backend'),
       skills: [
         { name: "Node.js", level: 85 },
         { name: "Express.js", level: 80 },
@@ -23,7 +27,7 @@ export default function SkillsPage() {
       ]
     },
     {
-      title: "Tools & Technologies",
+      title: t('categories.tools'),
       skills: [
         { name: "Git", level: 90 },
         { name: "Docker", level: 70 },
@@ -38,9 +42,9 @@ export default function SkillsPage() {
   return (
     <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-primary mb-4">Skills & Technologies</h1>
+        <h1 className="text-4xl font-bold text-primary mb-4">{t('title')}</h1>
         <p className="text-xl text-secondary max-w-2xl mx-auto">
-          Here are the technologies and tools I work with to bring ideas to life.
+          {t('subtitle')}
         </p>
       </div>
 
@@ -74,20 +78,11 @@ export default function SkillsPage() {
       {/* Additional Skills Section */}
       <div className="mt-16">
         <h2 className="text-2xl font-bold text-center text-primary mb-8">
-          Other Skills & Interests
+          {t('otherSkills')}
         </h2>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            "Responsive Design",
-            "Performance Optimization",
-            "Testing (Jest, Cypress)",
-            "Agile Methodologies",
-            "UI/UX Design",
-            "SEO Optimization",
-            "Progressive Web Apps",
-            "Accessibility (a11y)"
-          ].map((skill, index) => (
+          {t.raw('additionalSkills').map((skill: string, index: number) => (
             <div
               key={index}
               className="bg-surface border border-theme text-center py-3 px-4 rounded-lg text-sm font-medium text-primary hover:bg-primary hover:text-white transition-colors"
@@ -101,13 +96,13 @@ export default function SkillsPage() {
       {/* Learning Section */}
       <div className="mt-16 bg-surface border border-theme p-8 rounded-lg">
         <h2 className="text-2xl font-bold text-center text-primary mb-4">
-          Currently Learning
+          {t('currentlyLearning')}
         </h2>
         <p className="text-center text-secondary mb-6">
-          I believe in continuous learning and staying up-to-date with the latest technologies.
+          {t('learningDescription')}
         </p>
         <div className="flex flex-wrap justify-center gap-3">
-          {["Three.js", "React Native", "Kubernetes", "Machine Learning"].map((tech, index) => (
+          {t.raw('learningTech').map((tech: string, index: number) => (
             <span
               key={index}
               className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium shadow-sm"

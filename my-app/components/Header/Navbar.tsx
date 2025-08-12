@@ -2,24 +2,27 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
 import LanguageSelector from '../LanguageSelector';
 import ThemeSelector from '../ThemeSelector';
 
-const navigation = [
-  { name: 'Home', href: '' },
-  { name: 'About', href: '/about' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Skills', href: '/skills' },
-  { name: 'Contact', href: '/contact' },
-];
-
 export default function Navbar() {
   const pathname = usePathname();
   const locale = useLocale();
+  const t = useTranslations('navigation');
+  const themeT = useTranslations('theme');
+  const languageT = useTranslations('language');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+
+  const navigation = [
+    { name: t('home'), href: '' },
+    { name: t('about'), href: '/about' },
+    { name: t('projects'), href: '/projects' },
+    { name: t('skills'), href: '/skills' },
+    { name: t('contact'), href: '/contact' },
+  ];
 
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -50,14 +53,14 @@ export default function Navbar() {
           </div>
           
           {/* Navigation - Center (hidden on mobile) */}
-          <div className="hidden lg:flex items-center justify-center space-x-8">
+          <div className="hidden lg:flex items-center justify-center space-x-2">
             {navigation.map((item) => {
               const href = `/${locale}${item.href}`;
               return (
                 <Link
                   key={item.name}
                   href={href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`px-4 py-3 rounded-md text-sm font-medium transition-colors inline-block ${
                     pathname === href
                       ? 'bg-primary text-white'
                       : 'text-secondary hover:text-primary-color hover:bg-surface'
@@ -106,7 +109,7 @@ export default function Navbar() {
                   <Link
                     key={item.name}
                     href={href}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    className={`block px-4 py-3 rounded-md text-base font-medium transition-colors ${
                       pathname === href
                         ? 'bg-primary text-white'
                         : 'text-secondary hover:text-primary-color hover:bg-surface'
@@ -122,11 +125,11 @@ export default function Navbar() {
               <div className="px-3 py-4 border-t border-theme">
                 <div className="flex flex-col space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-secondary">Theme:</span>
+                    <span className="text-sm font-medium text-secondary">{themeT('label')}</span>
                     <ThemeSelector />
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-secondary">Language:</span>
+                    <span className="text-sm font-medium text-secondary">{languageT('label')}</span>
                     <LanguageSelector />
                   </div>
                 </div>

@@ -1,4 +1,17 @@
 {
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects", 
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "common": {
+    "loading": "Loading...",
+    "viewMore": "View More",
+    "getInTouch": "Get In Touch",
+    "learnMore": "Learn More"
+  },
   "homepage": {
     "hero": {
       "greeting": "Hi, I'm",
@@ -38,7 +51,7 @@
         "title": "Key Features Implemented",
         "themeSystem": {
           "title": "🎨 Dynamic Theme System",
-          "description": "Custom theme management with CSS variables, supporting light, dark, and purple themes with SSR-safe implementation."
+          "description": "Custom theme management with CSS variables, supporting light, dark, purple, viviant, earth, and chicle themes with SSR-safe implementation."
         },
         "responsive": {
           "title": "📱 Responsive Design", 
@@ -56,10 +69,113 @@
       }
     }
   },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Learn more about my background, skills, and passion for creating amazing web experiences.",
+    "myStory": "My Story",
+    "story": {
+      "paragraph1": "I'm a passionate web developer with expertise in modern technologies like React, Next.js, and Tailwind CSS. I love creating user-friendly applications that solve real-world problems.",
+      "paragraph2": "With a background in both frontend and backend development, I enjoy working on full-stack projects that challenge me to learn and grow as a developer.",
+      "paragraph3": "When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or sharing knowledge with the developer community."
+    },
+    "quickFacts": "Quick Facts",
+    "facts": [
+      "Full-stack Developer",
+      "React & Next.js Enthusiast", 
+      "Open Source Contributor",
+      "Problem Solver"
+    ]
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Here are some of the projects I've worked on. Each one represents a unique challenge and learning experience.",
+    "projectImage": "Project Image",
+    "viewGithub": "GitHub",
+    "viewDemo": "Live Demo",
+    "projectsList": [
+      {
+        "title": "E-commerce Platform",
+        "description": "A full-stack e-commerce solution built with Next.js, Stripe, and PostgreSQL."
+      },
+      {
+        "title": "Task Management App", 
+        "description": "A collaborative task management application with real-time updates."
+      },
+      {
+        "title": "Weather Dashboard",
+        "description": "A responsive weather dashboard with location-based forecasts."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "subtitle": "Here are the technologies and tools I work with to bring ideas to life.",
+    "categories": {
+      "frontend": "Frontend Development",
+      "backend": "Backend Development",
+      "tools": "Tools & Technologies"
+    },
+    "otherSkills": "Other Skills & Interests",
+    "additionalSkills": [
+      "Responsive Design",
+      "Performance Optimization", 
+      "Testing (Jest, Cypress)",
+      "Agile Methodologies",
+      "UI/UX Design",
+      "SEO Optimization",
+      "Progressive Web Apps",
+      "Accessibility (a11y)"
+    ],
+    "currentlyLearning": "Currently Learning",
+    "learningDescription": "I believe in continuous learning and staying up-to-date with the latest technologies.",
+    "learningTech": ["Three.js", "React Native", "Kubernetes", "Machine Learning"]
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "I'd love to hear from you! Whether you have a project in mind or just want to connect.",
+    "sendMessage": "Send a Message",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject", 
+      "subjectPlaceholder": "What's this about?",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project or just say hello!",
+      "sendButton": "Send Message"
+    },
+    "contactInfo": "Contact Information",
+    "availability": "I'm currently available for freelance work and interesting projects.",
+    "responseTime": "I typically respond within 24 hours.",
+    "social": "Connect with me"
+  },
   "theme": {
     "label": "Theme:",
-    "light": "light",
-    "dark": "dark", 
-    "purple": "purple"
+    "light": "Light",
+    "dark": "Dark", 
+    "purple": "Purple",
+    "viviant": "Viviant",
+    "earth": "Earth",
+    "chicle": "Candy"
+  },
+  "language": {
+    "label": "Language:"
+  },
+  "footer": {
+    "brand": {
+      "title": "Yerick's Portfolio",
+      "description": "Building amazing web experiences with modern technologies."
+    },
+    "navigation": {
+      "title": "Navigation"
+    },
+    "social": {
+      "title": "Connect",
+      "github": "GitHub",
+      "linkedin": "LinkedIn", 
+      "email": "Email"
+    },
+    "copyright": "© {year} Yerick's Portfolio. All rights reserved."
   }
 }

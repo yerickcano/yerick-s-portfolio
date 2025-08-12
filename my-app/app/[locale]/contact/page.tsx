@@ -1,124 +1,129 @@
+import { useTranslations } from 'next-intl';
+
 export default function ContactPage() {
+  const t = useTranslations('contact');
+  
   return (
     <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-primary mb-4">Get In Touch</h1>
+        <h1 className="text-4xl font-bold text-primary mb-4">{t('title')}</h1>
         <p className="text-xl text-secondary max-w-2xl mx-auto">
-          I'd love to hear from you! Whether you have a project in mind or just want to connect.
+          {t('subtitle')}
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Contact Form */}
         <div>
-          <h2 className="text-2xl font-semibold text-primary mb-6">Send a Message</h2>
+          <h2 className="text-2xl font-semibold text-primary mb-6">{t('sendMessage')}</h2>
           <form className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-secondary mb-2">
-                Name
+                {t('form.name')}
               </label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 className="w-full px-4 py-2 border border-theme rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-surface text-primary"
-                placeholder="Your name"
+                placeholder={t('form.namePlaceholder')}
               />
             </div>
             
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-secondary mb-2">
-                Email
+                {t('form.email')}
               </label>
               <input
                 type="email"
                 id="email"
                 name="email"
-                className="w-full px-4 py-2 border border-theme rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                placeholder="your@email.com"
+                className="w-full px-4 py-2 border border-theme rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-surface text-primary"
+                placeholder={t('form.emailPlaceholder')}
               />
             </div>
             
             <div>
               <label htmlFor="subject" className="block text-sm font-medium text-secondary mb-2">
-                Subject
+                {t('form.subject')}
               </label>
               <input
                 type="text"
                 id="subject"
                 name="subject"
-                className="w-full px-4 py-2 border border-theme rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                placeholder="What's this about?"
+                className="w-full px-4 py-2 border border-theme rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-surface text-primary"
+                placeholder={t('form.subjectPlaceholder')}
               />
             </div>
             
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-secondary mb-2">
-                Message
+                {t('form.message')}
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={6}
-                className="w-full px-4 py-2 border border-theme rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                placeholder="Tell me about your project or just say hello!"
+                className="w-full px-4 py-2 border border-theme rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-surface text-primary"
+                placeholder={t('form.messagePlaceholder')}
               ></textarea>
             </div>
             
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              className="w-full bg-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-primary-hover transition-colors"
             >
-              Send Message
+              {t('form.sendButton')}
             </button>
           </form>
         </div>
 
         {/* Contact Information */}
         <div>
-          <h2 className="text-2xl font-semibold text-primary mb-6">Let's Connect</h2>
+          <h2 className="text-2xl font-semibold text-primary mb-6">{t('contactInfo')}</h2>
           
           <div className="space-y-6">
             <div className="flex items-start">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+              <div className="w-12 h-12 bg-surface border border-theme rounded-lg flex items-center justify-center mr-4">
                 <span className="text-xl">📧</span>
               </div>
               <div>
-                <h3 className="font-medium text-primary">Email</h3>
-                <p className="text-gray-600">your@email.com</p>
+                <h3 className="font-medium text-primary">{t('social')}</h3>
+                <p className="text-secondary">your@email.com</p>
               </div>
             </div>
             
             <div className="flex items-start">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+              <div className="w-12 h-12 bg-surface border border-theme rounded-lg flex items-center justify-center mr-4">
                 <span className="text-xl">💼</span>
               </div>
               <div>
                 <h3 className="font-medium text-primary">LinkedIn</h3>
-                <a href="https://linkedin.com" className="text-blue-600 hover:text-blue-800">
-                  Connect with me
+                <a href="https://linkedin.com" className="text-primary hover:text-primary-hover transition-colors">
+                  {t('social')}
                 </a>
               </div>
             </div>
             
             <div className="flex items-start">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+              <div className="w-12 h-12 bg-surface border border-theme rounded-lg flex items-center justify-center mr-4">
                 <span className="text-xl">🐙</span>
               </div>
               <div>
                 <h3 className="font-medium text-primary">GitHub</h3>
-                <a href="https://github.com" className="text-blue-600 hover:text-blue-800">
-                  Check out my code
+                <a href="https://github.com" className="text-primary hover:text-primary-hover transition-colors">
+                  {t('social')}
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-            <h3 className="font-medium text-primary mb-2">Response Time</h3>
-            <p className="text-gray-600 text-sm">
-              I typically respond to messages within 24 hours. For urgent inquiries, 
-              feel free to reach out via LinkedIn for a faster response.
+          <div className="mt-8 p-6 bg-surface border border-theme rounded-lg">
+            <p className="text-secondary text-sm mb-2">
+              {t('availability')}
+            </p>
+            <p className="text-secondary text-sm">
+              {t('responseTime')}
             </p>
           </div>
         </div>

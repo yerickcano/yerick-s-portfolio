@@ -79,43 +79,43 @@ export default function HomePage() {
       <div className={`${styles.caseStudySection} border-theme`}>
         <div className={styles.caseStudyContainer}>
           <h2 className={`${styles.caseStudyTitle} text-primary`}>
-            Case Study: Building This Portfolio
+            {t('caseStudy.title')}
           </h2>
           
           <div className={styles.caseStudyGrid}>
             <div>
               <h3 className={`${styles.caseStudySubtitle} text-primary`}>
-                Tech Stack & Architecture
+                {t('caseStudy.techStack.title')}
               </h3>
               <ul className={styles.caseStudyList}>
                 <li className={styles.caseStudyListItem}>
                   <span className={`${styles.caseStudyBullet} bg-primary`}></span>
                   <span className="text-secondary">
-                    <strong className="text-primary">Next.js 15</strong> with App Router for modern React development
+                    {t('caseStudy.techStack.items.nextjs')}
                   </span>
                 </li>
                 <li className={styles.caseStudyListItem}>
                   <span className={`${styles.caseStudyBullet} bg-primary`}></span>
                   <span className="text-secondary">
-                    <strong className="text-primary">TypeScript</strong> for type safety and better development experience
+                    {t('caseStudy.techStack.items.typescript')}
                   </span>
                 </li>
                 <li className={styles.caseStudyListItem}>
                   <span className={`${styles.caseStudyBullet} bg-primary`}></span>
                   <span className="text-secondary">
-                    <strong className="text-primary">Tailwind CSS v4</strong> with CSS custom properties for theming
+                    {t('caseStudy.techStack.items.tailwind')}
                   </span>
                 </li>
                 <li className={styles.caseStudyListItem}>
                   <span className={`${styles.caseStudyBullet} bg-primary`}></span>
                   <span className="text-secondary">
-                    <strong className="text-primary">SCSS Modules</strong> for organized, component-scoped styling
+                    {t('caseStudy.techStack.items.scss')}
                   </span>
                 </li>
                 <li className={styles.caseStudyListItem}>
                   <span className={`${styles.caseStudyBullet} bg-primary`}></span>
                   <span className="text-secondary">
-                    <strong className="text-primary">Headless UI</strong> for accessible, unstyled components
+                    {t('caseStudy.techStack.items.headlessui')}
                   </span>
                 </li>
               </ul>
@@ -123,33 +123,33 @@ export default function HomePage() {
             
             <div>
               <h3 className={`${styles.caseStudySubtitle} text-primary`}>
-                Key Features Implemented
+                {t('caseStudy.features.title')}
               </h3>
               <div className={styles.caseStudyFeatures}>
                 <div className={`${styles.caseStudyFeatureCard} bg-surface`}>
                   <h4 className={`${styles.caseStudyFeatureTitle} text-primary`}>
-                    🎨 Dynamic Theme System
+                    {t('caseStudy.features.themeSystem.title')}
                   </h4>
                   <p className={`${styles.caseStudyFeatureDescription} text-secondary`}>
-                    Custom theme management with CSS variables, supporting light, dark, purple, viviant, earth, and chicle themes with SSR-safe implementation.
+                    {t('caseStudy.features.themeSystem.description')}
                   </p>
                 </div>
                 
                 <div className={`${styles.caseStudyFeatureCard} bg-surface`}>
                   <h4 className={`${styles.caseStudyFeatureTitle} text-primary`}>
-                    📱 Responsive Design
+                    {t('caseStudy.features.responsive.title')}
                   </h4>
                   <p className={`${styles.caseStudyFeatureDescription} text-secondary`}>
-                    Mobile-first approach with Tailwind's responsive utilities, ensuring optimal experience across all devices.
+                    {t('caseStudy.features.responsive.description')}
                   </p>
                 </div>
                 
                 <div className={`${styles.caseStudyFeatureCard} bg-surface`}>
                   <h4 className={`${styles.caseStudyFeatureTitle} text-primary`}>
-                    🏗️ Scalable Architecture
+                    {t('caseStudy.features.architecture.title')}
                   </h4>
                   <p className={`${styles.caseStudyFeatureDescription} text-secondary`}>
-                    Organized file structure with separated styles, reusable components, and TypeScript for maintainability.
+                    {t('caseStudy.features.architecture.description')}
                   </p>
                 </div>
               </div>
@@ -158,7 +158,7 @@ export default function HomePage() {
           
           <div className={styles.caseStudyFooter}>
             <p className={`${styles.caseStudyFooterText} text-secondary`}>
-              This portfolio showcases modern web development practices and attention to user experience.
+              {t('caseStudy.footer.description')}
             </p>
             <div className={styles.caseStudyFooterButtons}>
               <Button
@@ -168,14 +168,14 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View Source Code
+                {t('caseStudy.footer.sourceButton')}
               </Button>
               <Button
                 as={Link}
-                href="/projects"
+                href={`/${locale}/projects`}
                 className="button-secondary"
               >
-                See More Projects
+                {t('caseStudy.footer.projectsButton')}
               </Button>
             </div>
           </div>

@@ -1,4 +1,17 @@
 {
+  "navigation": {
+    "home": "Inicio",
+    "about": "Conoceme",
+    "projects": "Proyectos", 
+    "skills": "Habilidades",
+    "contact": "Contacto"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "viewMore": "Ver Más",
+    "getInTouch": "Contactar",
+    "learnMore": "Saber Más"
+  },
   "homepage": {
     "hero": {
       "greeting": "Hola, soy",
@@ -38,7 +51,7 @@
         "title": "Características Clave Implementadas",
         "themeSystem": {
           "title": "🎨 Sistema de Temas Dinámico",
-          "description": "Gestión de temas personalizada con variables CSS, soportando temas claro, oscuro y púrpura con implementación segura para SSR."
+          "description": "Gestión de temas personalizada con variables CSS, soportando temas claro, oscuro, púrpura, viviant, tierra y chicle con implementación segura para SSR."
         },
         "responsive": {
           "title": "📱 Diseño Responsivo", 
@@ -56,10 +69,113 @@
       }
     }
   },
+  "about": {
+    "title": "Acerca de Mí",
+    "subtitle": "Conoce más sobre mi experiencia, habilidades y pasión por crear experiencias web increíbles.",
+    "myStory": "Mi Historia",
+    "story": {
+      "paragraph1": "Soy un desarrollador web apasionado con experiencia en tecnologías modernas como React, Next.js y Tailwind CSS. Me encanta crear aplicaciones fáciles de usar que resuelven problemas del mundo real.",
+      "paragraph2": "Con experiencia tanto en desarrollo frontend como backend, disfruto trabajar en proyectos full-stack que me desafían a aprender y crecer como desarrollador.",
+      "paragraph3": "Cuando no estoy programando, puedes encontrarme explorando nuevas tecnologías, contribuyendo a proyectos de código abierto, o compartiendo conocimiento con la comunidad de desarrolladores."
+    },
+    "quickFacts": "Datos Rápidos",
+    "facts": [
+      "Desarrollador Full-stack",
+      "Entusiasta de React y Next.js", 
+      "Colaborador de Código Abierto",
+      "Solucionador de Problemas"
+    ]
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "subtitle": "Aquí están algunos de los proyectos en los que he trabajado. Cada uno representa un desafío único y experiencia de aprendizaje.",
+    "projectImage": "Imagen del Proyecto",
+    "viewGithub": "GitHub",
+    "viewDemo": "Demo en Vivo",
+    "projectsList": [
+      {
+        "title": "Plataforma E-commerce",
+        "description": "Una solución e-commerce full-stack construida con Next.js, Stripe y PostgreSQL."
+      },
+      {
+        "title": "App de Gestión de Tareas", 
+        "description": "Una aplicación colaborativa de gestión de tareas con actualizaciones en tiempo real."
+      },
+      {
+        "title": "Dashboard del Clima",
+        "description": "Un dashboard responsivo del clima con pronósticos basados en ubicación."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Habilidades y Tecnologías",
+    "subtitle": "Estas son las tecnologías y herramientas con las que trabajo para dar vida a las ideas.",
+    "categories": {
+      "frontend": "Desarrollo Frontend",
+      "backend": "Desarrollo Backend",
+      "tools": "Herramientas y Tecnologías"
+    },
+    "otherSkills": "Otras Habilidades e Intereses",
+    "additionalSkills": [
+      "Diseño Responsivo",
+      "Optimización de Rendimiento", 
+      "Testing (Jest, Cypress)",
+      "Metodologías Ágiles",
+      "Diseño UI/UX",
+      "Optimización SEO",
+      "Aplicaciones Web Progresivas",
+      "Accesibilidad (a11y)"
+    ],
+    "currentlyLearning": "Actualmente Aprendiendo",
+    "learningDescription": "Creo en el aprendizaje continuo y mantenerme actualizado con las últimas tecnologías.",
+    "learningTech": ["Three.js", "React Native", "Kubernetes", "Aprendizaje Automático"]
+  },
+  "contact": {
+    "title": "Contáctame",
+    "subtitle": "¡Me encantaría saber de ti! Ya sea que tengas un proyecto en mente o solo quieras conectar.",
+    "sendMessage": "Enviar Mensaje",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "subject": "Asunto", 
+      "subjectPlaceholder": "¿De qué se trata?",
+      "message": "Mensaje",
+      "messagePlaceholder": "¡Cuéntame sobre tu proyecto o simplemente saluda!",
+      "sendButton": "Enviar Mensaje"
+    },
+    "contactInfo": "Información de Contacto",
+    "availability": "Actualmente estoy disponible para trabajo freelance y proyectos interesantes.",
+    "responseTime": "Típicamente respondo dentro de 24 horas.",
+    "social": "Conéctate conmigo"
+  },
   "theme": {
     "label": "Tema:",
-    "light": "claro",
-    "dark": "oscuro", 
-    "purple": "púrpura"
+    "light": "Claro",
+    "dark": "Oscuro", 
+    "purple": "Púrpura",
+    "viviant": "Viviante",
+    "earth": "Tierra",
+    "chicle": "Chicle"
+  },
+  "language": {
+    "label": "Idioma:"
+  },
+  "footer": {
+    "brand": {
+      "title": "Portafolio de Yerick",
+      "description": "Construyendo experiencias web increíbles con tecnologías modernas."
+    },
+    "navigation": {
+      "title": "Navegación"
+    },
+    "social": {
+      "title": "Conectar",
+      "github": "GitHub",
+      "linkedin": "LinkedIn", 
+      "email": "Email"
+    },
+    "copyright": "© {year} Portafolio de Yerick. Todos los derechos reservados."
   }
 }

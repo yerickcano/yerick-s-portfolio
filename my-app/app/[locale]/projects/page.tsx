@@ -1,4 +1,7 @@
+import { useTranslations } from 'next-intl';
+
 export default function ProjectsPage() {
+  const t = useTranslations('projects');
   const projects = [
     {
       id: 1,
@@ -32,9 +35,9 @@ export default function ProjectsPage() {
   return (
     <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-primary mb-4">My Projects</h1>
+        <h1 className="text-4xl font-bold text-primary mb-4">{t('title')}</h1>
         <p className="text-xl text-secondary max-w-2xl mx-auto">
-          Here are some of the projects I've worked on. Each one represents a unique challenge and learning experience.
+          {t('subtitle')}
         </p>
       </div>
 

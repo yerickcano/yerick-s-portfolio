@@ -8,6 +8,7 @@ import {
   ListboxOption, 
   Transition 
 } from '@headlessui/react';
+import { useTranslations } from 'next-intl';
 import { useTheme } from '../hooks/useTheme';
 
 const themeIcons = {
@@ -21,6 +22,7 @@ const themeIcons = {
 
 export default function ThemeSelector() {
   const { theme, changeTheme, availableThemes, mounted } = useTheme();
+  const t = useTranslations('theme');
 
   // Don't render until mounted to avoid hydration mismatch
   if (!mounted) {
@@ -37,7 +39,7 @@ export default function ThemeSelector() {
         <ListboxButton className="relative w-full cursor-pointer rounded-md bg-surface border border-theme py-2 pl-3 pr-10 text-left text-sm text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
           <span className="flex items-center gap-2">
             <span>{themeIcons[currentTheme]}</span>
-            <span>{currentTheme.charAt(0).toUpperCase() + currentTheme.slice(1)}</span>
+            <span>{t(currentTheme)}</span>
           </span>
           <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
             <svg className="h-4 w-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,7 +70,7 @@ export default function ThemeSelector() {
                     <div className="flex items-center gap-2">
                       <span>{themeIcons[themeName]}</span>
                       <span className={selected ? 'font-medium' : 'font-normal'}>
-                        {themeName.charAt(0).toUpperCase() + themeName.slice(1)}
+                        {t(themeName)}
                       </span>
                     </div>
                     {selected ? (
