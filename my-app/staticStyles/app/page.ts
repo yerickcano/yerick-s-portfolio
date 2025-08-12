@@ -2,7 +2,7 @@
 export class styles {
   static container = 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8';
   static heroSection = 'text-center';
-  static heroTitle = 'text-4xl md:text-6xl font-bold mb-6';
+  static heroTitle = 'text-4xl md:text-6xl font-bold mt-12 mb-6';
   static heroDescription = 'text-xl md:text-2xl mb-8 max-w-3xl mx-auto';
   static heroButtonSecondary = 'button-secondary';
   static heroButtonContainer = 'flex flex-col sm:flex-row gap-4 justify-center';

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-export type Theme = 'light' | 'dark' | 'purple';
+export type Theme = 'light' | 'dark' | 'purple' | 'viviant' | 'earth' | 'chicle';
 
 export const useTheme = () => {
   const [theme, setTheme] = useState<Theme>('light'); // Default for server
@@ -13,7 +13,10 @@ export const useTheme = () => {
     // This only runs in the browser after hydration
     const savedTheme = localStorage.getItem('theme') as Theme;
     const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    const initialTheme = savedTheme || systemTheme;
+    
+    // Validate saved theme is one of our available themes
+    const isValidTheme = savedTheme && ['light', 'dark', 'purple', 'viviant', 'earth', 'chicle'].includes(savedTheme);
+    const initialTheme = isValidTheme ? savedTheme : systemTheme;
     
     setTheme(initialTheme);
     setMounted(true); // Mark as mounted
@@ -38,7 +41,7 @@ export const useTheme = () => {
   };
 
   // Get available themes
-  const availableThemes: Theme[] = ['light', 'dark', 'purple'];
+  const availableThemes: Theme[] = ['light', 'dark', 'purple', 'viviant', 'earth', 'chicle'];
 
   return {
     theme,

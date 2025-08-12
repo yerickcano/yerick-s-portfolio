@@ -14,13 +14,13 @@
 }
 
 [data-theme="dark"] {
-  --color-primary: #3b82f6;      // blue-500
-  --color-primary-hover: #2563eb; // blue-600
-  --color-secondary: #9ca3af;    // gray-400
+  --color-primary: #60a5fa;      // blue-400 (brighter blue)
+  --color-primary-hover: #3b82f6; // blue-500
+  --color-secondary: #d1d5db;    // gray-300 (brighter secondary text)
   --color-background: #111827;   // gray-900
   --color-surface: #1f2937;      // gray-800
-  --color-text-primary: #f9fafb; // gray-50
-  --color-text-secondary: #d1d5db; // gray-300
+  --color-text-primary: #ffffff; // pure white (maximum contrast)
+  --color-text-secondary: #e5e7eb; // gray-200 (brighter secondary)
   --color-border: #374151;       // gray-700
   --color-accent: #34d399;       // emerald-400
   --color-accent-hover: #10b981; // emerald-500
@@ -37,4 +37,46 @@
   --color-border: #d1d5db;       // gray-300
   --color-accent: #f59e0b;       // amber-500
   --color-accent-hover: #d97706; // amber-600
+}
+
+[data-theme="viviant"] {
+  --color-primary: #fb6f92;      // Main pink
+  --color-primary-hover: #ff8fab; // Lighter pink for hover
+  --color-secondary: #5a4a5c;    // Muted text color
+  --color-background: #ffe5ec;   // Lightest pink background
+  --color-surface: #ffc2d1;      // Light pink surface
+  --color-text-primary: #2d1b2e; // Dark text for contrast
+  --color-text-secondary: #5a4a5c; // Medium text
+  --color-border: #ffe5ec;       // Medium pink border
+  --color-accent: #ff8fab;       // Accent color
+  --color-accent-hover: #fb6f92; // Accent hover
+  --color-chip: #ff8fab;
+}
+
+[data-theme="earth"] {
+  --color-primary: #519872;      // Forest green
+  --color-primary-hover: #3b5249; // Darker green for hover
+  --color-secondary: #77625c;    // Muted brown text
+  --color-background: #ebefe7;   // Light sage background
+  --color-surface: #a4b494;      // Medium sage surface
+  --color-text-primary: #34252f; // Dark text for contrast
+  --color-text-secondary: #3b5249; // Dark green text
+  --color-border: #3b5249;       // Medium sage border
+  --color-accent: #519872;       // Green accent
+  --color-accent-hover: #3b5249; // Darker green accent hover
+  --color-chip: #519872;
+}
+
+[data-theme="chicle"] {
+  --color-primary: #98d2eb;      // Light blue
+  --color-primary-hover: #77625c; // Brown for hover
+  --color-secondary: #77625c;    // Brown text
+  --color-background: #e1f2fe;   // Very light blue background
+  --color-surface: #b2b1cf;      // Lavender surface
+  --color-text-primary: #403226; // Dark brown text
+  --color-text-secondary: #77625c; // Medium brown text
+  --color-border: #77625c;       // Lavender border
+  --color-accent: #98d2eb;       // Light blue accent
+  --color-accent-hover: #77625c; // Brown accent hover
+  --color-chip: #98d2eb;
 }

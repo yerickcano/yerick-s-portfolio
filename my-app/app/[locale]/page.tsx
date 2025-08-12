@@ -2,7 +2,7 @@ import Link from 'next/link';
 import {useLocale} from 'next-intl';
 import {Button} from '@headlessui/react';
 import { styles } from '../../staticStyles/app/page';
-import ThemeToggle from '../../components/ThemeToggle';
+
 import {useTranslations} from 'next-intl';
 
 
@@ -12,10 +12,6 @@ export default function HomePage() {
   
   return (
     <div className={styles.container}>
-      {/* Theme Toggle */}
-      <div className="mb-8 flex justify-end">
-        <ThemeToggle />
-      </div>
       {/* Hero Section */}
       <div className={styles.heroSection}>
         <h1 className={`${styles.heroTitle} text-primary`}>
@@ -135,7 +131,7 @@ export default function HomePage() {
                     🎨 Dynamic Theme System
                   </h4>
                   <p className={`${styles.caseStudyFeatureDescription} text-secondary`}>
-                    Custom theme management with CSS variables, supporting light, dark, and purple themes with SSR-safe implementation.
+                    Custom theme management with CSS variables, supporting light, dark, purple, viviant, earth, and chicle themes with SSR-safe implementation.
                   </p>
                 </div>
                 

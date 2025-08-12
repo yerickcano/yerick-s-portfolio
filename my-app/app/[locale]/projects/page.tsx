@@ -32,28 +32,29 @@ export default function ProjectsPage() {
   return (
     <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">My Projects</h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        <h1 className="text-4xl font-bold text-primary mb-4">My Projects</h1>
+        <p className="text-xl text-secondary max-w-2xl mx-auto">
           Here are some of the projects I've worked on. Each one represents a unique challenge and learning experience.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
-          <div key={project.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="h-48 bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-500">Project Image</span>
+          <div key={project.id} className="bg-surface border border-theme rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <div className="h-48 bg-surface border-b border-theme flex items-center justify-center">
+              <span className="text-secondary">Project Image</span>
             </div>
             
             <div className="p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
-              <p className="text-gray-600 mb-4">{project.description}</p>
+              <h3 className="text-xl font-semibold text-primary mb-2">{project.title}</h3>
+              <p className="text-secondary mb-4">{project.description}</p>
               
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
+                    className="px-3 py-1 border border-theme text-primary text-sm rounded-full"
+                    style={{ backgroundColor: 'var(--color-chip)' }}
                   >
                     {tech}
                   </span>

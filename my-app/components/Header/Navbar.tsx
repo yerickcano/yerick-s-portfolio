@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
+import LanguageSelector from '../LanguageSelector';
+import ThemeSelector from '../ThemeSelector';
 
 const navigation = [
   { name: 'Home', href: '' },
@@ -39,14 +41,16 @@ export default function Navbar() {
   return (
     <nav className="bg-surface shadow-lg sticky top-0 z-50 border-b border-theme" ref={menuRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex items-center justify-between h-16 lg:grid lg:grid-cols-3 lg:gap-8">
+          {/* Logo - Left side */}
           <div className="flex items-center">
             <Link href={`/${locale}`} className="flex-shrink-0">
-              <h1 className="text-xl font-bold text-primary">Yerick&apos;s Portfolio</h1>
+              <h1 className="text-xl font-bold text-primary">Yerick</h1>
             </Link>
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Navigation - Center (hidden on mobile) */}
+          <div className="hidden lg:flex items-center justify-center space-x-8">
             {navigation.map((item) => {
               const href = `/${locale}${item.href}`;
               return (
@@ -63,6 +67,12 @@ export default function Navbar() {
                 </Link>
               );
             })}
+          </div>
+          
+          {/* Theme and Language Selectors - Right side (hidden on mobile) */}
+          <div className="hidden lg:flex items-center justify-end space-x-3">
+            <ThemeSelector />
+            <LanguageSelector />
           </div>
 
           {/* Mobile menu button */}
@@ -107,6 +117,20 @@ export default function Navbar() {
                   </Link>
                 );
               })}
+              
+              {/* Theme and Language Selectors - Mobile */}
+              <div className="px-3 py-4 border-t border-theme">
+                <div className="flex flex-col space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-secondary">Theme:</span>
+                    <ThemeSelector />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-secondary">Language:</span>
+                    <LanguageSelector />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}
