@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 
 interface ImageCarouselProps {
@@ -22,53 +22,46 @@ export default function ImageCarousel({ images, projectTitle }: ImageCarouselPro
   // Minimum swipe distance (in px)
   const minSwipeDistance = 50;
 
-  if (!images || images.length === 0) {
-    return (
-      <div className="h-48 bg-surface border-b border-theme flex items-center justify-center">
-        <span className="text-secondary">No images available</span>
-      </div>
-    );
-  }
-
-  const goToPrevious = () => {
+  // Define functions before useEffect hooks using useCallback
+  const goToPrevious = useCallback(() => {
     setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
-  };
+  }, [images.length]);
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     setCurrentIndex((prevIndex) => 
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
-  };
+  }, [images.length]);
 
-  const goToSlide = (index: number) => {
+  const goToSlide = useCallback((index: number) => {
     setCurrentIndex(index);
-  };
+  }, []);
 
   // Modal functions
-  const openModal = (index: number) => {
+  const openModal = useCallback((index: number) => {
     setModalImageIndex(index);
     setIsModalOpen(true);
     document.body.style.overflow = 'hidden'; // Prevent background scroll
-  };
+  }, []);
 
-  const closeModal = () => {
+  const closeModal = useCallback(() => {
     setIsModalOpen(false);
     document.body.style.overflow = 'unset'; // Restore scroll
-  };
+  }, []);
 
-  const goToModalPrevious = () => {
+  const goToModalPrevious = useCallback(() => {
     setModalImageIndex((prevIndex) => 
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
-  };
+  }, [images.length]);
 
-  const goToModalNext = () => {
+  const goToModalNext = useCallback(() => {
     setModalImageIndex((prevIndex) => 
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
-  };
+  }, [images.length]);
 
   // Touch handlers for swipe functionality
   const onTouchStart = (e: React.TouchEvent) => {
@@ -94,7 +87,7 @@ export default function ImageCarousel({ images, projectTitle }: ImageCarouselPro
     }
   };
 
-  // Keyboard navigation
+  // Keyboard navigation - moved before early return
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (isModalOpen) {
@@ -125,19 +118,28 @@ export default function ImageCarousel({ images, projectTitle }: ImageCarouselPro
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      const carousel = carouselRef.current;
-      if (carousel) {
-        carousel.removeEventListener('keydown', handleKeyDown);
+      const currentCarousel = carouselRef.current;
+      if (currentCarousel) {
+        currentCarousel.removeEventListener('keydown', handleKeyDown);
       }
     };
-  }, [isModalOpen]);
+  }, [isModalOpen, goToModalNext, goToModalPrevious, goToNext, goToPrevious]);
 
-  // Cleanup on unmount
+  // Cleanup on unmount - moved before early return
   useEffect(() => {
     return () => {
       document.body.style.overflow = 'unset';
     };
   }, []);
+
+  // Early return after all hooks
+  if (!images || images.length === 0) {
+    return (
+      <div className="h-48 bg-surface border-b border-theme flex items-center justify-center">
+        <span className="text-secondary">No images available</span>
+      </div>
+    );
+  }
 
   return (
     <div 
