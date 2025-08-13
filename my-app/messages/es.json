@@ -145,7 +145,7 @@
     ],
     "currentlyLearning": "Actualmente Aprendiendo",
     "learningDescription": "Creo en el aprendizaje continuo y mantenerme actualizado con las últimas tecnologías.",
-    "learningTech": ["Three.js", "React Native", "Kubernetes", "Aprendizaje Automático"]
+    "learningTech": ["Python", "Streamlit", "AWS", "Azure", "Figma"]
   },
   "contact": {
     "title": "Contáctame",
