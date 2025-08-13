@@ -73,7 +73,7 @@ export default function Navbar() {
           </div>
           
           {/* Theme and Language Selectors - Right side (hidden on mobile) */}
-          <div className="hidden lg:flex items-center justify-end space-x-3">
+          <div className="hidden lg:flex items-center ml-auto  space-x-3">
             <ThemeSelector />
             <LanguageSelector />
           </div>
