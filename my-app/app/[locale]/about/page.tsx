@@ -22,7 +22,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="bg-surface border border-theme p-8 rounded-lg">
+        <div className="glass-effect border border-theme p-8 rounded-lg">
           <h3 className="text-xl font-semibold text-primary mb-4">{t('quickFacts')}</h3>
           <ul className="space-y-3 text-secondary mb-6">
             {t.raw('facts').map((fact: string, index: number) => (

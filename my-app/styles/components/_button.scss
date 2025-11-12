@@ -1,39 +1,48 @@
 @layer components {
   .button {
     @apply p-4 rounded-lg shadow transition-colors;
-    background-color: var(--color-surface);
+    background-color: transparent;
     color: var(--color-text-primary);
     border: 1px solid var(--color-border);
-  }
-  
-  .button-primary {
-    @apply px-8 py-3 rounded-lg font-medium transition-colors;
-    background-color: var(--color-primary);
-    color: var(--color-background);
-    
-    &:hover {
-      background-color: var(--color-primary-hover);
-    }
-  }
-  
-  .button-secondary {
-    @apply px-8 py-3 rounded-lg font-medium transition-colors;
-    border: 1px solid var(--color-primary);
-    color: var(--color-primary);
-    background-color: transparent;
     
     &:hover {
       background-color: var(--color-surface);
     }
   }
   
-  .button-accent {
+  .button-primary {
     @apply px-8 py-3 rounded-lg font-medium transition-colors;
-    background-color: var(--color-accent);
-    color: var(--color-background);
+    background-color: transparent;
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
     
     &:hover {
-      background-color: var(--color-accent-hover);
+      background-color: var(--color-surface);
+      border-color: var(--color-border);
+    }
+  }
+  
+  .button-secondary {
+    @apply px-8 py-3 rounded-lg font-medium transition-colors;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
+    background-color: transparent;
+    
+    &:hover {
+      background-color: var(--color-surface);
+      border-color: var(--color-border);
+    }
+  }
+  
+  .button-accent {
+    @apply px-8 py-3 rounded-lg font-medium transition-colors;
+    background-color: transparent;
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    
+    &:hover {
+      background-color: var(--color-surface);
+      border-color: var(--color-border);
     }
   }
 }

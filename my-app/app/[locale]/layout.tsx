@@ -1,7 +1,6 @@
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import Navbar from '../../components/Header/Navbar';
-import Footer from '../../components/Footer/Footer';
 import { styles } from '../../staticStyles/app/layout';
 
 export default async function LocaleLayout({
@@ -21,7 +20,6 @@ export default async function LocaleLayout({
         <main className="flex-grow">
           {children}
         </main>
-        <Footer />
       </div>
     </NextIntlClientProvider>
   );

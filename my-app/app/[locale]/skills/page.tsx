@@ -50,7 +50,7 @@ export default function SkillsPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {skillCategories.map((category, categoryIndex) => (
-          <div key={categoryIndex} className="bg-surface border border-theme p-6 rounded-lg shadow-md">
+          <div key={categoryIndex} className="glass-effect border border-theme p-6 rounded-lg shadow-md">
             <h2 className="text-xl font-semibold text-primary mb-6 text-center">
               {category.title}
             </h2>
@@ -85,7 +85,7 @@ export default function SkillsPage() {
           {t.raw('additionalSkills').map((skill: string, index: number) => (
             <div
               key={index}
-              className="bg-surface border border-theme text-center py-3 px-4 rounded-lg text-sm font-medium text-primary hover:bg-primary hover:text-white transition-colors"
+              className="glass-effect border border-theme text-center py-3 px-4 rounded-lg text-sm font-medium text-primary hover:bg-primary hover:text-white transition-colors"
             >
               {skill}
             </div>
@@ -94,7 +94,7 @@ export default function SkillsPage() {
       </div>
 
       {/* Learning Section */}
-      <div className="mt-16 bg-surface border border-theme p-8 rounded-lg">
+      <div className="mt-16 glass-effect border border-theme p-8 rounded-lg">
         <h2 className="text-2xl font-bold text-center text-primary mb-4">
           {t('currentlyLearning')}
         </h2>
