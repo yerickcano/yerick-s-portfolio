@@ -17,7 +17,7 @@ export default async function LocaleLayout({
     <NextIntlClientProvider messages={messages}>
       <div className={styles.container}>
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow pt-36">
           {children}
         </main>
       </div>

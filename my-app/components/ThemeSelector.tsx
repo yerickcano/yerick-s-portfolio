@@ -13,11 +13,8 @@ import { useTheme } from '../hooks/useTheme';
 
 const themeIcons = {
   light: '☀️',
-  dark: '🌙', 
-  purple: '💜',
-  viviant: '🌸',
-  earth: '🌿',
-  chicle: '🍬'
+  dark: '🌙',
+  earth: '🌿'
 } as const;
 
 export default function ThemeSelector() {
@@ -27,7 +24,7 @@ export default function ThemeSelector() {
   // Don't render until mounted to avoid hydration mismatch
   if (!mounted) {
     return (
-      <div className="w-24 h-10 bg-surface border border-theme rounded-md animate-pulse"></div>
+      <div className="w-24 h-10 softCard rounded-md animate-pulse"></div>
     );
   }
 
@@ -35,11 +32,11 @@ export default function ThemeSelector() {
 
   return (
     <Listbox value={currentTheme} onChange={changeTheme}>
-      <div className="relative">
-        <ListboxButton className="relative w-full cursor-pointer rounded-md bg-surface border border-theme py-2 pl-3 pr-10 text-left text-sm text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-          <span className="flex items-center gap-2">
-            <span>{themeIcons[currentTheme]}</span>
-            <span>{t(currentTheme)}</span>
+      <div className="relative w-full z-20">
+        <ListboxButton className="softCard clickable relative w-full cursor-pointer rounded-md py-2 pl-3 pr-10 text-left text-sm text-primary focus:outline-none min-w-0">
+          <span className="flex items-center gap-2 truncate">
+            <span className="flex-shrink-0">{themeIcons[currentTheme]}</span>
+            <span className="truncate">{t(currentTheme)}</span>
           </span>
           <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
             <svg className="h-4 w-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -54,13 +51,13 @@ export default function ThemeSelector() {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <ListboxOptions className="absolute right-0 mt-1 max-h-60 w-full overflow-auto rounded-md bg-surface border border-theme py-1 text-sm shadow-lg focus:outline-none z-50">
+          <ListboxOptions className="absolute left-0 right-0 mt-2 max-h-60 w-full overflow-auto rounded-md softCard py-1 text-sm focus:outline-none z-[200]">
             {availableThemes.map((themeName) => (
               <ListboxOption
                 key={themeName}
                 className={({ active }) =>
                   `relative cursor-pointer select-none py-2 pl-3 pr-9 transition-colors ${
-                    active ? 'bg-primary text-white' : 'text-primary hover:bg-surface'
+                    active ? 'bg-primary/10 text-primary' : 'text-primary hover:bg-surface/50'
                   }`
                 }
                 value={themeName}

@@ -4,7 +4,7 @@ export class styles {
   static heroSection = 'text-center';
   static heroTitle = 'text-4xl md:text-6xl font-bold mt-12 mb-6';
   static heroDescription = 'text-xl md:text-2xl mb-8 max-w-3xl mx-auto';
-  static heroButtonSecondary = 'button-secondary';
+  static heroButtonSecondary = 'buttonSecondary';
   static heroButtonContainer = 'flex flex-col sm:flex-row gap-4 justify-center';
   static heroButtonLinkContainer = 'flex flex-col sm:flex-row gap-4 justify-center';
   static featuresTitle = 'text-3xl font-bold text-center';

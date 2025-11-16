@@ -17,8 +17,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const locale = useLocale();
 
   return (
-    <Link href={`/${locale}/projects#${project.slug}`}>
-      <div className="glass-effect rounded-lg overflow-hidden mb-4 hover:shadow-lg transition-all cursor-pointer group">
+    <Link href={`/${locale}/projects#${project.slug}`} className="softCard clickable rounded-lg overflow-hidden mb-4 transition-all cursor-pointer group block">
+      <div className="overflow-hidden">
         {project.images[0] && (
           <div className="relative w-full h-32 overflow-hidden">
             <Image

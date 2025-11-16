@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-export type Theme = 'light' | 'dark' | 'purple' | 'viviant' | 'earth' | 'chicle';
+export type Theme = 'light' | 'dark' | 'earth';
 
 export const useTheme = () => {
   const [theme, setTheme] = useState<Theme>('light'); // Default for server
@@ -15,7 +15,7 @@ export const useTheme = () => {
     const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     
     // Validate saved theme is one of our available themes
-    const isValidTheme = savedTheme && ['light', 'dark', 'purple', 'viviant', 'earth', 'chicle'].includes(savedTheme);
+    const isValidTheme = savedTheme && ['light', 'dark', 'earth'].includes(savedTheme);
     const initialTheme = isValidTheme ? savedTheme : systemTheme;
     
     setTheme(initialTheme);
@@ -41,7 +41,7 @@ export const useTheme = () => {
   };
 
   // Get available themes
-  const availableThemes: Theme[] = ['light', 'dark', 'purple', 'viviant', 'earth', 'chicle'];
+  const availableThemes: Theme[] = ['light', 'dark', 'earth'];
 
   return {
     theme,

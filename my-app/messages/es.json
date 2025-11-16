@@ -1,7 +1,10 @@
 {
+  "navbar": {
+    "name": "YERICK, UN SOÑADOR DESPIERTO"
+  },
   "navigation": {
     "home": "Inicio",
-    "about": "Conoceme",
+    "about": "Acerca de",
     "projects": "Proyectos", 
     "skills": "Habilidades",
     "contact": "Contacto"
@@ -51,7 +54,7 @@
         "title": "Características Clave Implementadas",
         "themeSystem": {
           "title": "🎨 Sistema de Temas Dinámico",
-          "description": "Gestión de temas personalizada con variables CSS, soportando temas claro, oscuro, púrpura, viviant, tierra y chicle con implementación segura para SSR."
+          "description": "Gestión de temas personalizada con variables CSS, soportando temas claro, oscuro y tierra con implementación segura para SSR."
         },
         "responsive": {
           "title": "📱 Diseño Responsivo", 
@@ -174,11 +177,8 @@
   "theme": {
     "label": "Tema:",
     "light": "Claro",
-    "dark": "Oscuro", 
-    "purple": "Púrpura",
-    "viviant": "Viviante",
-    "earth": "Tierra",
-    "chicle": "Chicle"
+    "dark": "Oscuro",
+    "earth": "Tierra"
   },
   "language": {
     "label": "Idioma:"

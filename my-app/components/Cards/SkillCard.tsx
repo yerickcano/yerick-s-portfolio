@@ -13,7 +13,7 @@ export default function SkillCard({ category }: SkillCardProps) {
   const t = useTranslations('skills');
 
   return (
-    <div className="glass-effect rounded-lg p-4 mb-4">
+    <div className="softCard rounded-lg p-4 mb-4">
       <h4 className="text-lg font-semibold text-primary mb-3">{category.title}</h4>
       <div className="space-y-2 mb-3">
         {category.skills.slice(0, 3).map((skill, index) => (

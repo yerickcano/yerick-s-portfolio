@@ -1,0 +1,40 @@
+@layer components {
+  // Responsive background positioning using Tailwind breakpoints (sm: 640px, lg: 1024px)
+  .navbar {
+    background-image: url('/images/paints/Sakura.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -300px;
+    background-attachment: scroll;
+
+    // Tailwind sm breakpoint (640px)
+    @media (min-width: 640px) {
+      background-position: center -450px;
+      background-attachment: fixed;
+    }
+
+    // Tailwind lg breakpoint (1024px)
+    @media (min-width: 1024px) {
+      background-position: center -650px;
+    }
+  }
+
+  .navTitle {
+    background-color: var(--color-surface);
+    box-shadow: 
+      8px 8px 16px rgba(0, 0, 0, 0.1),
+      -8px -8px 16px rgba(241, 252, 255, 0.8);
+    border: none;
+    transition: box-shadow 0.3s ease;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  // Dark theme adjustments
+  [data-theme="dark"] .navTitle {
+    box-shadow: 
+      8px 8px 16px rgba(0, 0, 0, 0.5),
+      -8px -8px 16px rgba(255, 255, 255, 0.05);
+  }
+}
+

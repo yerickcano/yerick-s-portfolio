@@ -1,0 +1,101 @@
+@layer components {
+  // Neumorphism utility class - soft UI effect
+  .softCard {
+    background-color: var(--color-surface) !important;
+    border-radius: 0.5rem;
+    box-shadow: 
+      8px 8px 16px rgba(0, 0, 0, 0.1),
+      -4px -5px 16px rgba(241, 252, 255, 1)  !important;
+    border: none !important;
+    transition: box-shadow 0.2s ease, transform 0.1s ease;
+  }
+
+  // Neumorphism pressed/inset effect
+  .softCardInset {
+    background-color: var(--color-surface);
+    border-radius: 0.5rem;
+    box-shadow: 
+      inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+      inset -4px -4px 8px rgba(241, 252, 255, 0.8);
+    border: none;
+  }
+
+  // Neumorphism hover effect (raised) - only for interactive elements
+  button.softCard:hover,
+  a.softCard:hover,
+  [role="button"].softCard:hover,
+  .softCard.cursor-pointer:hover {
+    box-shadow: 
+      12px 12px 24px rgba(0, 0, 0, 0.12),
+      -12px -12px 24px rgba(241, 252, 255, 0.9);
+  }
+
+  // Neumorphism active/pressed state - ONLY for elements explicitly marked with .clickable class
+  // This ensures only truly interactive elements get the pressed effect
+  // Higher specificity to override base .softCard styles and hover states
+  button.softCard.clickable:active,
+  a.softCard.clickable:active,
+  [role="button"].softCard.clickable:active,
+  .softCard.clickable:active {
+    box-shadow: 
+      inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+      inset -4px -4px 8px rgba(248, 254, 255, 0.8) !important;
+    transform: scale(0.98);
+  }
+  
+  // Explicitly prevent active state on elements without .clickable class
+  .softCard:not(.clickable):active {
+    box-shadow: 
+      8px 8px 16px rgba(0, 0, 0, 0.1),
+      -8px -8px 16px rgba(241, 252, 255, 0.8) !important;
+  }
+
+  // Theme-specific Neumorphism adjustments
+  [data-theme="dark"] .softCard {
+    background-color: var(--color-surface);
+    box-shadow: 
+      8px 8px 16px rgba(0, 0, 0, 0.5),
+      -8px -8px 16px rgba(255, 255, 255, 0.05);
+  }
+
+  [data-theme="dark"] button.softCard:hover,
+  [data-theme="dark"] a.softCard:hover,
+  [data-theme="dark"] [role="button"].softCard:hover,
+  [data-theme="dark"] .softCard.cursor-pointer:hover {
+    box-shadow: 
+      12px 12px 24px rgba(0, 0, 0, 0.6),
+      -12px -12px 24px rgba(255, 255, 255, 0.08);
+  }
+
+  [data-theme="dark"] button.softCard.clickable:active,
+  [data-theme="dark"] a.softCard.clickable:active,
+  [data-theme="dark"] [role="button"].softCard.clickable:active,
+  [data-theme="dark"] .softCard.clickable:active {
+    box-shadow: 
+      inset 4px 4px 8px rgba(0, 0, 0, 0.5),
+      inset -4px -4px 8px rgba(255, 255, 255, 0.05) !important;
+    transform: scale(0.98);
+  }
+  
+  // Explicitly prevent active state on elements without .clickable class in dark theme
+  [data-theme="dark"] .softCard:not(.clickable):active {
+    box-shadow: 
+      8px 8px 16px rgba(0, 0, 0, 0.5),
+      -8px -8px 16px rgba(255, 255, 255, 0.05) !important;
+  }
+
+  [data-theme="dark"] .softCardInset {
+    box-shadow: 
+      inset 4px 4px 8px rgba(0, 0, 0, 0.5),
+      inset -4px -4px 8px rgba(255, 255, 255, 0.05);
+  }
+
+  // Earth theme
+  [data-theme="earth"] .softCard {
+    background-color: var(--color-surface);
+    box-shadow: 
+      8px 8px 16px rgba(81, 152, 114, 0.15),
+      -8px -8px 16px rgba(241, 252, 255, 0.85);
+  }
+}
+
