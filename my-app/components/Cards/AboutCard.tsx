@@ -6,7 +6,7 @@ export default function AboutCard() {
   const locale = useLocale();
 
   return (
-    <div className="glass-effect rounded-lg p-6 mb-4 hover:shadow-lg transition-shadow">
+    <div className="softCard rounded-lg p-6 mb-4 transition-all">
       <h3 className="text-xl font-bold text-primary mb-3">{t('title')}</h3>
       <p className="text-secondary text-sm mb-4 line-clamp-3">{t('subtitle')}</p>
       <Link 

@@ -59,7 +59,7 @@ export default function ProjectsPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
-          <div key={project.id} className="glass-effect border border-theme rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <div key={project.id} id={project.slug} className="softCard rounded-lg overflow-hidden transition-all">
             <ImageCarousel 
               images={project.images} 
               projectTitle={project.title}

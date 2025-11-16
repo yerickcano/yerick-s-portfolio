@@ -21,7 +21,7 @@ export default function ContactPage() {
             {/* Email */}
             <a 
               href="mailto:yerickcanogarcia@gmail.com"
-              className="flex items-start p-4 glass-effect border border-theme rounded-lg hover:bg-primary hover:border-primary-hover transition-all duration-200 group cursor-pointer"
+              className="flex items-start p-4 softCard clickable rounded-lg transition-all duration-200 group cursor-pointer"
             >
               <div className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mr-4 group-hover:bg-white group-hover:text-primary transition-all duration-200">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
@@ -45,7 +45,7 @@ export default function ContactPage() {
               href="https://www.linkedin.com/in/yerickcano"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-start p-4 glass-effect border border-theme rounded-lg hover:bg-blue-600 hover:border-blue-700 transition-all duration-200 group cursor-pointer"
+              className="flex items-start p-4 softCard clickable rounded-lg transition-all duration-200 group cursor-pointer"
             >
               <div className="w-12 h-12 bg-blue-600 text-white rounded-lg flex items-center justify-center mr-4 group-hover:bg-white group-hover:text-blue-600 transition-all duration-200">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -68,7 +68,7 @@ export default function ContactPage() {
               href="https://github.com/yerickcano"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-start p-4 glass-effect border border-theme rounded-lg hover:bg-gray-800 hover:border-gray-700 transition-all duration-200 group cursor-pointer"
+              className="flex items-start p-4 softCard clickable rounded-lg transition-all duration-200 group cursor-pointer"
             >
               <div className="w-12 h-12 bg-gray-800 text-white rounded-lg flex items-center justify-center mr-4 group-hover:bg-white group-hover:text-gray-800 transition-all duration-200">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -91,7 +91,7 @@ export default function ContactPage() {
         <div>
           <h2 className="text-2xl font-semibold text-primary mb-6">{t('availabilitySection')}</h2>
           
-          <div className="glass-effect border border-theme p-6 rounded-lg mb-6">
+          <div className="softCard p-6 rounded-lg mb-6">
             <p className="text-secondary mb-4">
               {t('availability')}
             </p>

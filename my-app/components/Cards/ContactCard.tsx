@@ -13,7 +13,7 @@ export default function ContactCard({ type }: ContactCardProps) {
     return (
       <a 
         href="mailto:yerickcanogarcia@gmail.com"
-        className="glass-effect rounded-lg p-4 mb-4 hover:shadow-lg transition-all block group"
+        className="softCard clickable rounded-lg p-4 mb-4 transition-all block group"
       >
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors">
@@ -37,7 +37,7 @@ export default function ContactCard({ type }: ContactCardProps) {
         href="https://www.linkedin.com/in/yerickcano"
         target="_blank"
         rel="noopener noreferrer"
-        className="glass-effect rounded-lg p-4 mb-4 hover:shadow-lg transition-all block group"
+        className="softCard clickable rounded-lg p-4 mb-4 transition-all block group"
       >
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-blue-600/10 rounded-lg flex items-center justify-center group-hover:bg-blue-600 transition-colors">
@@ -60,7 +60,7 @@ export default function ContactCard({ type }: ContactCardProps) {
         href="https://github.com/yerickcano"
         target="_blank"
         rel="noopener noreferrer"
-        className="glass-effect rounded-lg p-4 mb-4 hover:shadow-lg transition-all block group"
+        className="softCard clickable rounded-lg p-4 mb-4 transition-all block group"
       >
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-gray-800/10 rounded-lg flex items-center justify-center group-hover:bg-gray-800 transition-colors">
@@ -78,8 +78,8 @@ export default function ContactCard({ type }: ContactCardProps) {
   }
 
   return (
-    <Link href={`/${locale}/contact`}>
-      <div className="glass-effect rounded-lg p-4 mb-4 hover:shadow-lg transition-all cursor-pointer">
+    <Link href={`/${locale}/contact`} className="softCard clickable rounded-lg p-4 mb-4 transition-all cursor-pointer block">
+      <div>
         <h4 className="text-sm font-semibold text-primary mb-2">{t('availabilitySection')}</h4>
         <p className="text-xs text-secondary mb-3">{t('availability')}</p>
         <span className="text-primary hover:text-primary-color text-xs font-medium inline-flex items-center gap-1">

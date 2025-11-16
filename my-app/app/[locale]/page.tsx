@@ -2,7 +2,6 @@
 
 import {useLocale} from 'next-intl';
 import {useTranslations} from 'next-intl';
-import {useState} from 'react';
 import SideNavigator from '../../components/SideNavigator/SideNavigator';
 import AboutCard from '../../components/Cards/AboutCard';
 import ProjectCard from '../../components/Cards/ProjectCard';
@@ -14,7 +13,6 @@ export default function HomePage() {
   const projectsT = useTranslations('projects');
   const skillsT = useTranslations('skills');
   const locale = useLocale();
-  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   // Get projects data
   const projectsData = projectsT.raw('projectsList');
@@ -94,43 +92,17 @@ export default function HomePage() {
 
   return (
     <div className="relative min-h-screen">
-      {/* Mobile Breadcrumb Button */}
-      <div className="lg:hidden fixed top-32 left-4 z-40">
-        <button
-          onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
-          className="glass-effect rounded-lg p-3 shadow-lg"
-          aria-label="Toggle navigation"
-        >
-          <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-
-      {/* Mobile Navigation Menu */}
-      {isMobileNavOpen && (
-        <>
-          <div 
-            className="lg:hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-30"
-            onClick={() => setIsMobileNavOpen(false)}
-          />
-          <div className="lg:hidden fixed top-40 left-4 z-40 w-64">
-            <SideNavigator onLinkClick={() => setIsMobileNavOpen(false)} />
-          </div>
-        </>
-      )}
-
       {/* Main Content - 5 Column Layout */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-6">
           {/* Column 1: Side Navigator (Desktop) */}
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <SideNavigator />
           </div>
 
           {/* Column 2: About Section */}
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-primary mb-4 sticky top-28 glass-effect rounded-lg p-3">
+            <h2 className="text-2xl font-bold text-primary mb-4 softCard rounded-lg p-3">
               About
             </h2>
             <AboutCard />
@@ -139,7 +111,7 @@ export default function HomePage() {
 
           {/* Column 3: Projects Section */}
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-primary mb-4 sticky top-28 glass-effect rounded-lg p-3">
+            <h2 className="text-2xl font-bold text-primary mb-4 softCard rounded-lg p-3">
               Projects
             </h2>
             {projects.map((project) => (
@@ -149,7 +121,7 @@ export default function HomePage() {
 
           {/* Column 4: Skills Section */}
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-primary mb-4 sticky top-28 glass-effect rounded-lg p-3">
+            <h2 className="text-2xl font-bold text-primary mb-4 softCard rounded-lg p-3">
               Skills
             </h2>
             {skillCategories.map((category, index) => (
@@ -159,7 +131,7 @@ export default function HomePage() {
 
           {/* Column 5: Contact Section */}
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-primary mb-4 sticky top-28 glass-effect rounded-lg p-3">
+            <h2 className="text-2xl font-bold text-primary mb-4 softCard rounded-lg p-3">
               Contact
             </h2>
             <ContactCard type="email" />

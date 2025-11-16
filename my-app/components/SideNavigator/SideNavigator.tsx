@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
+import ThemeSelector from '../ThemeSelector';
+import LanguageSelector from '../LanguageSelector';
 
 interface SideNavigatorProps {
   onLinkClick?: () => void;
@@ -67,7 +69,7 @@ export default function SideNavigator({ onLinkClick }: SideNavigatorProps) {
 
   return (
     <nav className="flex flex-col h-full">
-      <div className="glass-effect rounded-lg p-4 space-y-2">
+      <div className="softCard rounded-lg p-4 space-y-2 overflow-visible">
         {/* Navigation Links */}
         {navigation.map((item) => {
           const href = `/${locale}${item.href}`;
@@ -78,10 +80,10 @@ export default function SideNavigator({ onLinkClick }: SideNavigatorProps) {
               key={item.name}
               href={href}
               onClick={onLinkClick}
-              className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
+              className={`softCard clickable flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
                 isActive
-                  ? 'bg-surface text-primary border border-theme'
-                  : 'text-secondary hover:text-primary hover:bg-surface/50'
+                  ? 'bg-surface text-primary'
+                  : 'text-secondary hover:text-primary'
               }`}
             >
               <span className="text-xl">{item.icon}</span>
@@ -105,7 +107,7 @@ export default function SideNavigator({ onLinkClick }: SideNavigatorProps) {
                 key={social.name}
                 href={social.href}
                 {...linkProps}
-                className="flex items-center justify-center p-2 rounded-lg transition-colors text-secondary hover:text-primary hover:bg-surface/50 group"
+                className="softCard clickable flex items-center justify-center p-2 rounded-lg transition-all text-secondary hover:text-primary group"
                 title={social.name}
               >
                 <span className="group-hover:scale-110 transition-transform w-4 h-4">
@@ -114,6 +116,23 @@ export default function SideNavigator({ onLinkClick }: SideNavigatorProps) {
               </a>
             );
           })}
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-theme my-3"></div>
+
+        {/* Theme and Language Selectors */}
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 px-2 min-w-0">
+          <div className="flex-shrink-0 min-w-0 w-full sm:w-auto">
+            <div className="w-full sm:w-auto">
+              <ThemeSelector />
+            </div>
+          </div>
+          <div className="flex-shrink-0 min-w-0 w-full sm:w-auto">
+            <div className="w-full sm:w-auto">
+              <LanguageSelector />
+            </div>
+          </div>
         </div>
       </div>
     </nav>

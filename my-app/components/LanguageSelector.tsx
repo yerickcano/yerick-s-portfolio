@@ -32,11 +32,11 @@ export default function LanguageSelector() {
 
   return (
     <Listbox value={locale} onChange={handleLanguageChange}>
-      <div className="relative">
-        <ListboxButton className="relative w-full cursor-pointer rounded-md bg-surface border border-theme py-2 pl-3 pr-10 text-left text-sm text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-          <span className="flex items-center gap-2">
-            <span>{currentLanguage.flag}</span>
-            <span>{currentLanguage.name}</span>
+      <div className="relative w-full z-10">
+        <ListboxButton className="softCard clickable relative w-full cursor-pointer rounded-md py-2 pl-3 pr-10 text-left text-sm text-primary focus:outline-none min-w-0">
+          <span className="flex items-center gap-2 truncate">
+            <span className="flex-shrink-0">{currentLanguage.flag}</span>
+            <span className="truncate">{currentLanguage.name}</span>
           </span>
           <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
             <svg className="h-4 w-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,13 +51,13 @@ export default function LanguageSelector() {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <ListboxOptions className="absolute right-0 mt-1 max-h-60 w-full overflow-auto rounded-md bg-surface border border-theme py-1 text-sm shadow-lg focus:outline-none z-50">
+          <ListboxOptions className="absolute left-0 right-0 mt-2 max-h-60 w-full overflow-auto rounded-md softCard py-1 text-sm focus:outline-none z-[100]">
             {languages.map((lang) => (
               <ListboxOption
                 key={lang.code}
                 className={({ active }) =>
                   `relative cursor-pointer select-none py-2 pl-3 pr-9 transition-colors ${
-                    active ? 'bg-primary text-white' : 'text-primary hover:bg-surface'
+                    active ? 'bg-primary/10 text-primary' : 'text-primary hover:bg-surface/50'
                   }`
                 }
                 value={lang.code}

@@ -1,48 +1,111 @@
 @layer components {
   .button {
-    @apply p-4 rounded-lg shadow transition-colors;
-    background-color: transparent;
+    @apply p-4 rounded-lg transition-all;
+    background-color: var(--color-surface);
+    box-shadow: 
+      8px 8px 16px rgba(0, 0, 0, 0.1),
+      -8px -8px 16px rgba(241, 252, 255, 0.8);
+    border: none;
     color: var(--color-text-primary);
-    border: 1px solid var(--color-border);
     
     &:hover {
-      background-color: var(--color-surface);
+      box-shadow: 
+        12px 12px 24px rgba(0, 0, 0, 0.12),
+        -12px -12px 24px rgba(241, 252, 255, 0.9);
+    }
+    
+    &:active {
+      box-shadow: 
+        inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+        inset -4px -4px 8px rgba(241, 252, 255, 0.8);
     }
   }
   
-  .button-primary {
-    @apply px-8 py-3 rounded-lg font-medium transition-colors;
-    background-color: transparent;
+  .buttonPrimary {
+    @apply px-8 py-3 rounded-lg font-medium transition-all;
+    background-color: var(--color-surface);
+    box-shadow: 
+      8px 8px 16px rgba(0, 0, 0, 0.1),
+      -8px -8px 16px rgba(241, 252, 255, 0.8);
+    border: none;
     color: var(--color-text-primary);
-    border: 1px solid var(--color-border);
     
     &:hover {
-      background-color: var(--color-surface);
-      border-color: var(--color-border);
+      box-shadow: 
+        12px 12px 24px rgba(0, 0, 0, 0.12),
+        -12px -12px 24px rgba(241, 252, 255, 0.9);
+    }
+    
+    &:active {
+      box-shadow: 
+        inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+        inset -4px -4px 8px rgba(241, 252, 255, 0.8);
     }
   }
   
-  .button-secondary {
-    @apply px-8 py-3 rounded-lg font-medium transition-colors;
-    border: 1px solid var(--color-border);
+  .buttonSecondary {
+    @apply px-8 py-3 rounded-lg font-medium transition-all;
+    background-color: var(--color-surface);
+    box-shadow: 
+      8px 8px 16px rgba(0, 0, 0, 0.1),
+      -8px -8px 16px rgba(241, 252, 255, 0.8);
+    border: none;
     color: var(--color-text-primary);
-    background-color: transparent;
     
     &:hover {
-      background-color: var(--color-surface);
-      border-color: var(--color-border);
+      box-shadow: 
+        12px 12px 24px rgba(0, 0, 0, 0.12),
+        -12px -12px 24px rgba(241, 252, 255, 0.9);
+    }
+    
+    &:active {
+      box-shadow: 
+        inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+        inset -4px -4px 8px rgba(241, 252, 255, 0.8);
     }
   }
   
-  .button-accent {
-    @apply px-8 py-3 rounded-lg font-medium transition-colors;
-    background-color: transparent;
+  .buttonAccent {
+    @apply px-8 py-3 rounded-lg font-medium transition-all;
+    background-color: var(--color-surface);
+    box-shadow: 
+      8px 8px 16px rgba(0, 0, 0, 0.1),
+      -8px -8px 16px rgba(241, 252, 255, 0.8);
+    border: none;
     color: var(--color-text-primary);
-    border: 1px solid var(--color-border);
     
     &:hover {
-      background-color: var(--color-surface);
-      border-color: var(--color-border);
+      box-shadow: 
+        12px 12px 24px rgba(0, 0, 0, 0.12),
+        -12px -12px 24px rgba(241, 252, 255, 0.9);
+    }
+    
+    &:active {
+      box-shadow: 
+        inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+        inset -4px -4px 8px rgba(241, 252, 255, 0.8);
+    }
+  }
+
+  // Dark theme button adjustments
+  [data-theme="dark"] .button,
+  [data-theme="dark"] .buttonPrimary,
+  [data-theme="dark"] .buttonSecondary,
+  [data-theme="dark"] .buttonAccent {
+    box-shadow: 
+      8px 8px 16px rgba(0, 0, 0, 0.5),
+      -8px -8px 16px rgba(255, 255, 255, 0.05);
+    
+    &:hover {
+      box-shadow: 
+        12px 12px 24px rgba(0, 0, 0, 0.6),
+        -12px -12px 24px rgba(255, 255, 255, 0.08);
+    }
+    
+    &:active {
+      box-shadow: 
+        inset 4px 4px 8px rgba(0, 0, 0, 0.5),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.05);
     }
   }
 }

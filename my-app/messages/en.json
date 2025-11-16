@@ -1,4 +1,7 @@
 {
+  "navbar": {
+    "name": "YERICK, AN AWAKE DREAMER"
+  },
   "navigation": {
     "home": "Home",
     "about": "About",
@@ -51,7 +54,7 @@
         "title": "Key Features Implemented",
         "themeSystem": {
           "title": "🎨 Dynamic Theme System",
-          "description": "Custom theme management with CSS variables, supporting light, dark, purple, viviant, earth, and chicle themes with SSR-safe implementation."
+          "description": "Custom theme management with CSS variables, supporting light, dark, and earth themes with SSR-safe implementation."
         },
         "responsive": {
           "title": "📱 Responsive Design", 
@@ -174,11 +177,8 @@
   "theme": {
     "label": "Theme:",
     "light": "Light",
-    "dark": "Dark", 
-    "purple": "Purple",
-    "viviant": "Viviant",
-    "earth": "Earth",
-    "chicle": "Candy"
+    "dark": "Dark",
+    "earth": "Earth"
   },
   "language": {
     "label": "Language:"
