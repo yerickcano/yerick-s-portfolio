@@ -34,7 +34,14 @@
   [data-theme="dark"] .navTitle {
     box-shadow: 
       8px 8px 16px rgba(0, 0, 0, 0.5),
-      -8px -8px 16px rgba(255, 255, 255, 0.05);
+      -8px -8px 16px rgba(30, 70, 110, 0.5);
+  }
+
+  // Earth theme adjustments
+  [data-theme="earth"] .navTitle {
+    box-shadow: 
+      8px 8px 16px rgba(0, 0, 0, 0.3),
+      -8px -8px 16px rgba(150, 240, 180, 0.7);
   }
 }
 

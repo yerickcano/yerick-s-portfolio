@@ -55,7 +55,7 @@
     background-color: var(--color-surface);
     box-shadow: 
       8px 8px 16px rgba(0, 0, 0, 0.5),
-      -8px -8px 16px rgba(255, 255, 255, 0.05);
+      -8px -8px 16px rgba(30, 70, 110, 0.5) !important;
   }
 
   [data-theme="dark"] button.softCard:hover,
@@ -64,7 +64,7 @@
   [data-theme="dark"] .softCard.cursor-pointer:hover {
     box-shadow: 
       12px 12px 24px rgba(0, 0, 0, 0.6),
-      -12px -12px 24px rgba(255, 255, 255, 0.08);
+      -12px -12px 24px rgba(30, 70, 110, 0.6) !important;
   }
 
   [data-theme="dark"] button.softCard.clickable:active,
@@ -73,7 +73,7 @@
   [data-theme="dark"] .softCard.clickable:active {
     box-shadow: 
       inset 4px 4px 8px rgba(0, 0, 0, 0.5),
-      inset -4px -4px 8px rgba(255, 255, 255, 0.05) !important;
+      inset -4px -4px 8px rgba(30, 70, 110, 0.5) !important;
     transform: scale(0.98);
   }
   
@@ -81,21 +81,53 @@
   [data-theme="dark"] .softCard:not(.clickable):active {
     box-shadow: 
       8px 8px 16px rgba(0, 0, 0, 0.5),
-      -8px -8px 16px rgba(255, 255, 255, 0.05) !important;
+      -8px -8px 16px rgba(30, 70, 110, 0.5) !important;
   }
 
   [data-theme="dark"] .softCardInset {
     box-shadow: 
       inset 4px 4px 8px rgba(0, 0, 0, 0.5),
-      inset -4px -4px 8px rgba(255, 255, 255, 0.05);
+      inset -4px -4px 8px rgba(30, 70, 110, 0.5);
   }
 
   // Earth theme
   [data-theme="earth"] .softCard {
     background-color: var(--color-surface);
     box-shadow: 
-      8px 8px 16px rgba(81, 152, 114, 0.15),
-      -8px -8px 16px rgba(241, 252, 255, 0.85);
+      8px 8px 16px rgba(0, 0, 0, 0.3),
+      -8px -8px 16px rgba(107, 207, 140, 0.7) !important;
+  }
+
+  [data-theme="earth"] button.softCard:hover,
+  [data-theme="earth"] a.softCard:hover,
+  [data-theme="earth"] [role="button"].softCard:hover,
+  [data-theme="earth"] .softCard.cursor-pointer:hover {
+    box-shadow: 
+      12px 12px 24px rgba(0, 0, 0, 0.35),
+      -12px -12px 24px rgba(107, 207, 140, 0.7);
+  }
+
+  [data-theme="earth"] button.softCard.clickable:active,
+  [data-theme="earth"] a.softCard.clickable:active,
+  [data-theme="earth"] [role="button"].softCard.clickable:active,
+  [data-theme="earth"] .softCard.clickable:active {
+    box-shadow: 
+      inset 4px 4px 8px rgba(0, 0, 0, 0.3),
+      inset -4px -4px 8px rgba(107, 207, 140, 0.7) !important;
+    transform: scale(0.98);
+  }
+  
+  // Explicitly prevent active state on elements without .clickable class in earth theme
+  [data-theme="earth"] .softCard:not(.clickable):active {
+    box-shadow: 
+      8px 8px 16px rgba(0, 0, 0, 0.3),
+      -8px -8px 16px rgba(107, 207, 140, 0.7) !important;
+  }
+
+  [data-theme="earth"] .softCardInset {
+    box-shadow: 
+      inset 4px 4px 8px rgba(0, 0, 0, 0.3),
+      inset -4px -4px 8px rgba(107, 207, 140, 0.7);
   }
 }
 

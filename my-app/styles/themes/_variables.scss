@@ -17,25 +17,25 @@
   --color-primary: #60a5fa;      // blue-400 (brighter blue)
   --color-primary-hover: #3b82f6; // blue-500
   --color-secondary: #d1d5db;    // gray-300 (brighter secondary text)
-  --color-background: #111827;   // gray-900
-  --color-surface: #1f2937;      // gray-800
+  --color-background: #002945;   // Dark blue background
+  --color-surface: #002945;      // Dark blue surface
   --color-text-primary: #ffffff; // pure white (maximum contrast)
   --color-text-secondary: #e5e7eb; // gray-200 (brighter secondary)
-  --color-border: #374151;       // gray-700
+  --color-border: #003d66;       // Lighter blue border
   --color-accent: #34d399;       // emerald-400
   --color-accent-hover: #10b981; // emerald-500
 }
 
 [data-theme="earth"] {
-  --color-primary: #519872;      // Forest green
-  --color-primary-hover: #3b5249; // Darker green for hover
+  --color-primary: #1BB04C;      // Vibrant green
+  --color-primary-hover: #15993d; // Darker green for hover
   --color-secondary: #77625c;    // Muted brown text
-  --color-background: #ebefe7;   // Light sage background
-  --color-surface: #a4b494;      // Medium sage surface
-  --color-text-primary: #34252f; // Dark text for contrast
-  --color-text-secondary: #3b5249; // Dark green text
-  --color-border: #3b5249;       // Medium sage border
-  --color-accent: #519872;       // Green accent
-  --color-accent-hover: #3b5249; // Darker green accent hover
-  --color-chip: #519872;
+  --color-background: #1BB04C;   // Vibrant green background
+  --color-surface: #1BB04C;      // Vibrant green surface
+  --color-text-primary: #ffffff; // White text for contrast on green
+  --color-text-secondary: #ffffff; // White secondary text
+  --color-border: #15993d;       // Darker green border
+  --color-accent: #1BB04C;       // Green accent
+  --color-accent-hover: #15993d; // Darker green accent hover
+  --color-chip: #1BB04C;
 }
