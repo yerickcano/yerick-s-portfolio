@@ -5,17 +5,19 @@ import { useLocale } from 'next-intl';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import SideNavigator from '../SideNavigator/SideNavigator';
+import appPackage from '../../package.json';
 
 export default function Navbar() {
   const locale = useLocale();
   const t = useTranslations('navbar');
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const appVersion = `v${appPackage.version}`;
 
   return (
     <>
       <nav className="navbar fixed top-0 left-0 right-0 z-50 glass-effect shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-[auto_1fr] xl:grid-cols-1 items-center h-28 gap-4">
+          <div className="grid grid-cols-[auto_1fr_auto] xl:grid-cols-[1fr_auto] items-center h-28 gap-4">
             {/* Burger Button - Mobile/Tablet (Left column - minimal width) */}
             <button
               onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
@@ -38,6 +40,13 @@ export default function Navbar() {
                   <h1 className="text-sm sm:text-base lg:text-xl font-bold tracking-[0.15em] sm:tracking-[0.20em]">{t('name')}</h1>
                 </div>
               </Link>
+            </div>
+
+            {/* App Version */}
+            <div className="justify-self-end">
+              <span className="softCard rounded-lg px-2 py-1 text-xs font-semibold text-secondary">
+                {appVersion}
+              </span>
             </div>
           </div>
         </div>
