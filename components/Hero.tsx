@@ -90,7 +90,7 @@ export default function Hero() {
             <div className="glass rounded-3xl p-2.5 shadow-2xl shadow-black/10">
               <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
                 <Image
-                  src="/pfp.png"
+                  src="/pfp.jpg"
                   alt="Yerick Cano — Full Stack Software Engineer"
                   fill
                   className="object-cover"
