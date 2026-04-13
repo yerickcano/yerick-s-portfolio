@@ -13,14 +13,14 @@ type LangContextValue = {
 const LangContext = createContext<LangContextValue>({
   lang: "es",
   toggle: () => {},
-  tr: t.es as typeof t.en,
+  tr: t.es as unknown as typeof t.en,
 });
 
 export function LangProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLang] = useState<Lang>("es");
   const toggle = () => setLang((l) => (l === "en" ? "es" : "en"));
   return (
-    <LangContext.Provider value={{ lang, toggle, tr: t[lang] as typeof t.en }}>
+    <LangContext.Provider value={{ lang, toggle, tr: t[lang] as unknown as typeof t.en }}>
       {children}
     </LangContext.Provider>
   );
