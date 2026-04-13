@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cr-red: #CE1126;
+  --color-cr-red-dark: #A50E1E;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #eef2ff;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 15% 10%, rgba(206, 17, 38, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 85% 90%, rgba(99, 120, 255, 0.07) 0%, transparent 60%),
+    linear-gradient(160deg, #eef2ff 0%, #f4f7ff 45%, #e8eeff 100%);
+  background-attachment: fixed;
+  color: #0d0d0d;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Glass utilities ─────────────────────────────────────── */
+.glass {
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.glass-subtle {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}

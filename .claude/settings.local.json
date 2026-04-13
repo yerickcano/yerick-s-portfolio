@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(py --version)",
+      "Bash(py:*)",
+      "Read(//c/Users/Usuario/.claude/skills/uiux/**)",
+      "Bash(dir \"C:\\\\Users\\\\Usuario\\\\.claude\\\\skills\\\\uiux\")",
+      "Bash(bunx create-next-app@latest:*)",
+      "Bash(bun --version)",
+      "Bash(npm --version)",
+      "Bash(where bun:*)",
+      "Read(//c/Users/Usuario/.bun/**)",
+      "Read(//c/Users/Usuario/AppData/Local/**)",
+      "Read(//c/Users/Usuario/AppData/Roaming/**)",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(node:*)"
+    ]
+  }
+}
