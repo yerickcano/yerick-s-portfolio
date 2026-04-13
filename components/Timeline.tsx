@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { MapPin, CalendarDays, Briefcase } from "lucide-react";
+import { useLang } from "@/context/LangContext";
 
 const experiences = [
   {
@@ -11,8 +12,6 @@ const experiences = [
     period: "Feb 2023 – Jul 2025",
     duration: "2 yrs 6 mos",
     location: "San José, Costa Rica",
-    description:
-      "Developed software that helps users manage the migration of their SQL code to Snowflake SQL. Contributed to the SnowConvert toolchain used by enterprises worldwide to accelerate cloud data transformation.",
     tags: ["JavaScript", "React", "TypeScript", "SQL", "Snowflake"],
   },
   {
@@ -22,8 +21,6 @@ const experiences = [
     period: "Jul 2022 – Feb 2023",
     duration: "8 mos",
     location: "San José, Costa Rica",
-    description:
-      "Developed tooling to help users migrate SQL codebases to Snowflake SQL. Transitioned into Snowflake as part of the team acquisition, carrying the same product forward.",
     tags: ["JavaScript", "React", "SQL"],
   },
   {
@@ -33,13 +30,14 @@ const experiences = [
     period: "Feb 2022 – Jul 2022",
     duration: "6 mos",
     location: "San José, Costa Rica",
-    description:
-      "Started my professional journey contributing to SQL migration tooling, learning modern engineering practices in a fast-moving product environment.",
     tags: ["JavaScript", "React"],
   },
 ];
 
 export default function Timeline() {
+  const { tr } = useLang();
+  const ex = tr.experience;
+
   return (
     <section id="experience" className="py-28 px-5 sm:px-8">
       <div className="max-w-6xl mx-auto">
@@ -50,11 +48,9 @@ export default function Timeline() {
           transition={{ duration: 0.58 }}
         >
           <p className="text-cr-red font-semibold text-xs tracking-[0.2em] uppercase mb-3">
-            Experience
+            {ex.eyebrow}
           </p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-14">
-            Career timeline
-          </h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-14">{ex.heading}</h2>
         </motion.div>
 
         <div className="relative">
@@ -111,7 +107,7 @@ export default function Timeline() {
                   </div>
 
                   <p className="text-gray-600 text-sm leading-[1.7] mb-5">
-                    {exp.description}
+                    {ex.descriptions[i]}
                   </p>
 
                   {/* Tags */}

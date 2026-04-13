@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import type { IconType } from "react-icons";
+import { useLang } from "@/context/LangContext";
 
 type ContactLink = {
   icon: IconType;
@@ -45,6 +46,9 @@ const links: ContactLink[] = [
 ];
 
 export default function Contact() {
+  const { tr } = useLang();
+  const ct = tr.contact;
+
   return (
     <section id="contact" className="py-28 px-5 sm:px-8">
       <div className="max-w-6xl mx-auto">
@@ -57,15 +61,10 @@ export default function Contact() {
           className="text-center mb-12"
         >
           <p className="text-cr-red font-semibold text-xs tracking-[0.2em] uppercase mb-3">
-            Contact
+            {ct.eyebrow}
           </p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Let&apos;s connect
-          </h2>
-          <p className="text-gray-500 text-base leading-relaxed max-w-sm mx-auto">
-            Open to interesting projects and conversations. Reach out through
-            any channel below.
-          </p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">{ct.heading}</h2>
+          <p className="text-gray-500 text-base leading-relaxed max-w-sm mx-auto">{ct.bio}</p>
         </motion.div>
 
         {/* Links card */}
@@ -82,9 +81,7 @@ export default function Contact() {
                 key={label}
                 href={href}
                 target={href.startsWith("mailto") ? undefined : "_blank"}
-                rel={
-                  href.startsWith("mailto") ? undefined : "noopener noreferrer"
-                }
+                rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

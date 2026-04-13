@@ -2,15 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-
-const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
-];
+import { useLang } from "@/context/LangContext";
 
 export default function Navbar() {
+  const { lang, toggle, tr } = useLang();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -41,7 +36,7 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-1">
-          {navLinks.map(({ href, label }) => (
+          {tr.nav.links.map(({ href, label }) => (
             <a
               key={href}
               href={href}
@@ -50,23 +45,41 @@ export default function Navbar() {
               {label}
             </a>
           ))}
+
+          {/* Language toggle */}
+          <button
+            onClick={toggle}
+            className="ml-2 px-3 py-1.5 text-xs font-bold rounded-lg border border-gray-200 text-gray-500 hover:text-cr-red hover:border-cr-red/40 hover:bg-cr-red/5 transition-all duration-200"
+            aria-label="Toggle language"
+          >
+            {lang === "en" ? "ES" : "EN"}
+          </button>
         </nav>
 
-        {/* Mobile toggle */}
-        <button
-          onClick={() => setMenuOpen((v) => !v)}
-          className="md:hidden p-2 rounded-lg text-gray-600 hover:text-cr-red hover:bg-cr-red/5 transition-colors"
-          aria-label="Toggle navigation menu"
-          aria-expanded={menuOpen}
-        >
-          {menuOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        {/* Mobile: lang toggle + hamburger */}
+        <div className="md:hidden flex items-center gap-2">
+          <button
+            onClick={toggle}
+            className="px-2.5 py-1 text-xs font-bold rounded-lg border border-gray-200 text-gray-500 hover:text-cr-red hover:border-cr-red/40 transition-all duration-200"
+            aria-label="Toggle language"
+          >
+            {lang === "en" ? "ES" : "EN"}
+          </button>
+          <button
+            onClick={() => setMenuOpen((v) => !v)}
+            className="p-2 rounded-lg text-gray-600 hover:text-cr-red hover:bg-cr-red/5 transition-colors"
+            aria-label="Toggle navigation menu"
+            aria-expanded={menuOpen}
+          >
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden px-5 pb-4 pt-1 border-t border-white/60">
-          {navLinks.map(({ href, label }) => (
+          {tr.nav.links.map(({ href, label }) => (
             <a
               key={href}
               href={href}

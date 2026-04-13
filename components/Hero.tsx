@@ -3,8 +3,12 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import { useLang } from "@/context/LangContext";
 
 export default function Hero() {
+  const { tr } = useLang();
+  const h = tr.hero;
+
   return (
     <section className="relative min-h-dvh flex flex-col items-center justify-center overflow-hidden pt-16">
       {/* Background blobs */}
@@ -23,7 +27,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-cr-red font-semibold text-xs tracking-[0.2em] uppercase mb-5"
           >
-            Full Stack Software Engineer
+            {h.role}
           </motion.p>
 
           <motion.h1
@@ -44,7 +48,7 @@ export default function Hero() {
             className="inline-flex items-center gap-3 text-gray-500 text-lg font-light italic mb-7 lg:justify-start justify-center"
           >
             <span className="w-0.5 h-6 bg-cr-red rounded-full shrink-0" />
-            &ldquo;Do what is right!&rdquo;
+            &ldquo;{h.quote}&rdquo;
           </motion.blockquote>
 
           <motion.p
@@ -53,8 +57,7 @@ export default function Hero() {
             transition={{ duration: 0.55, delay: 0.45 }}
             className="text-gray-500 text-lg leading-relaxed mb-10 max-w-md mx-auto lg:mx-0"
           >
-            Building software that creates real opportunities for people.
-            4 years crafting impactful digital products from Costa Rica.
+            {h.bio}
           </motion.p>
 
           <motion.div
@@ -67,13 +70,13 @@ export default function Hero() {
               href="#projects"
               className="inline-flex items-center gap-2 px-6 py-3 bg-cr-red text-white text-sm font-semibold rounded-xl hover:bg-cr-red-dark transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-cr-red/25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cr-red"
             >
-              View Projects <ArrowRight size={15} />
+              {h.cta_projects} <ArrowRight size={15} />
             </a>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 px-6 py-3 glass text-sm font-semibold text-gray-700 rounded-xl hover:text-cr-red transition-all duration-200 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cr-red"
             >
-              Get in touch
+              {h.cta_contact}
             </a>
           </motion.div>
         </div>
@@ -107,8 +110,8 @@ export default function Hero() {
               transition={{ duration: 0.45, delay: 0.9 }}
               className="absolute -bottom-4 -right-4 glass-subtle rounded-xl px-4 py-2.5 shadow-lg"
             >
-              <p className="text-[10px] font-medium text-gray-400 uppercase tracking-wider">Based in</p>
-              <p className="font-bold text-gray-900 text-sm leading-tight">Costa Rica</p>
+              <p className="text-[10px] font-medium text-gray-400 uppercase tracking-wider">{h.based_in_label}</p>
+              <p className="font-bold text-gray-900 text-sm leading-tight">{h.based_in}</p>
             </motion.div>
 
             {/* Decorative dot grid — top left */}
