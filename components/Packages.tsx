@@ -24,7 +24,7 @@ type Addon = {
 
 const badgeClasses: Record<string, string> = {
   basic: "bg-gray-100 text-gray-700",
-  starter: "bg-green-100 text-green-800",
+  starter: "bg-green-500 text-white",
   growth: "bg-blue-100 text-blue-800",
   pro: "bg-amber-100 text-amber-800",
   scale: "bg-purple-100 text-purple-800",
@@ -63,13 +63,13 @@ export default function Packages() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className={`glass rounded-2xl flex flex-col relative ${
                 pkg.featured
-                  ? "py-10 px-6 ring-2 ring-green-400/70 shadow-2xl shadow-green-100/80 lg:scale-105 z-10"
+                  ? "py-10 px-6 ring-2 ring-green-500 shadow-2xl shadow-green-400/50 lg:scale-[1.07] z-10 bg-green-50/20"
                   : "py-6 px-6"
               }`}
             >
               {/* Featured top accent bar */}
               {pkg.featured && (
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-emerald-400 rounded-t-2xl" />
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-green-400 via-emerald-400 to-green-500 rounded-t-2xl shadow-[0_2px_12px_rgba(34,197,94,0.6)]" />
               )}
 
               {/* Badge */}
@@ -122,7 +122,11 @@ export default function Packages() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-auto flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-cr-red text-white text-sm font-semibold rounded-xl hover:bg-cr-red-dark transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-cr-red/25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cr-red"
+                className={`mt-auto flex items-center justify-center gap-2 w-full px-4 py-2.5 text-white text-sm font-semibold rounded-xl transition-all duration-200 hover:-translate-y-0.5 shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 ${
+                  pkg.featured
+                    ? "bg-green-500 hover:bg-green-600 shadow-green-400/35 focus-visible:outline-green-500"
+                    : "bg-cr-red hover:bg-cr-red-dark shadow-cr-red/25 focus-visible:outline-cr-red"
+                }`}
               >
                 <MessageCircle size={15} />
                 {pk.cta}
