@@ -19,7 +19,9 @@
       "Bash(node:*)",
       "Bash(npx tsc:*)",
       "Bash(python skills/ui-ux-pro-max/scripts/search.py \"portfolio freelance pricing packages personal brand\" --design-system -f markdown)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "WebFetch(domain:www.yerick.me)",
+      "WebSearch"
     ]
   }
 }

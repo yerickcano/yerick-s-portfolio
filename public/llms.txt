@@ -1,0 +1,26 @@
+# Yerick Cano — Full Stack Software Engineer
+> Building software that creates real opportunities for people. Based in Costa Rica.
+
+## About
+Full Stack Software Engineer with 4 years of experience.
+Specializes in: React, Next.js, TypeScript, Node.js, PostgreSQL, Tailwind CSS.
+Location: Costa Rica.
+
+## Projects
+- Fuller (https://fuller.express): Delivery platform for Costa Rica's Caribbean coast. Created a new local economy where delivery didn't exist.
+- SnowConvert: Enterprise SQL migration tool for Snowflake. Used worldwide to accelerate cloud data transformation.
+- BusCaribe (https://buscaribe.vercel.app): Modern bus schedule app. 500 users on day one.
+
+## Services (https://www.yerick.me/#packages)
+Web development packages from $99 to $15,000+.
+- Página Pro ($99): Single professional page, 24–48 hr delivery
+- Digital Presence ($199–$499): Full site with Google indexing
+- Business Growth ($999–$1,999): CMS + chatbot + automation
+- Web Application ($2,999–$5,999): Custom app with auth, admin panel
+- Platform/Marketplace ($6,999–$15,000+): Full marketplace with real-time features
+
+## Contact
+- GitHub: https://github.com/yerickcano
+- LinkedIn: https://www.linkedin.com/in/yerickcano
+- Email: yerickcanogarcia@gmail.com
+- WhatsApp: https://wa.me/50687571891
