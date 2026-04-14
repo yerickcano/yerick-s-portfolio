@@ -48,7 +48,7 @@ export const t = {
         {
           tagline: "Delivery for Costa Rica's Caribbean coast",
           description:
-            "An Uber Eats-like platform built from the ground up for a region where delivery services simply didn't exist. Fuller created a new local economy — connecting restaurants, drivers, and customers in a community that had never had access to on-demand delivery. A people's choice, built with purpose.",
+            "An Uber Eats-like platform for Costa Rica's Caribbean coast — a region where delivery services didn't exist. Fuller created a new local economy, connecting restaurants, drivers, and customers.",
           linkLabel: "Visit fuller.express",
         },
         {
@@ -124,13 +124,13 @@ export const t = {
         {
           tagline: "Delivery para la costa caribeña de Costa Rica",
           description:
-            "Una plataforma similar a Uber Eats construida desde cero para una región donde los servicios de entrega simplemente no existían. Fuller creó una nueva economía local — conectando restaurantes, conductores y clientes en una comunidad que nunca había tenido acceso al delivery bajo demanda. Una opción del pueblo, construida con propósito.",
+            "Plataforma tipo Uber Eats para la costa caribeña de Costa Rica — donde el delivery no existía. Fuller creó una nueva economía local conectando restaurantes, conductores y clientes.",
           linkLabel: "Visitar fuller.express",
         },
         {
           tagline: "Modernizando los datos del mundo",
           description:
-            "Una herramienta de migración de nivel profesional que ayuda a las empresas a convertir sus bases de código SQL a Snowflake SQL. Utilizada por empresas de todo el mundo para acelerar la transformación de datos en la nube a gran escala.",
+            "Una herramienta de migración de nivel profesional que ayuda a empresas a convertir su código SQL a Snowflake SQL. Usada mundialmente para acelerar la transformación de datos en la nube.",
           linkLabel: "Ver documentación",
         },
         {
