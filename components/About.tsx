@@ -40,8 +40,6 @@ export default function About() {
                 &ldquo;{a.quote}&rdquo;
               </p>
             </blockquote>
-
-            <p className="text-gray-600 leading-[1.75] text-base">{a.bio2}</p>
           </motion.div>
 
           {/* Values — spans 2 cols */}

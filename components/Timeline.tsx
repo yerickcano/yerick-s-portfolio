@@ -6,6 +6,15 @@ import { useLang } from "@/context/LangContext";
 
 const experiences = [
   {
+    company: "Fuller",
+    role: "Software Engineer",
+    type: "Full-time",
+    period: "Nov 2025 – Present",
+    duration: "5 mos",
+    location: "Limón, Costa Rica",
+    tags: ["React", "TypeScript", "Next.js", "Vercel", "Supabase", "Railway", "Claude"],
+  },
+  {
     company: "Snowflake",
     role: "Software Engineer",
     type: "Full-time · Hybrid",
@@ -91,7 +100,7 @@ export default function Timeline() {
                   </div>
 
                   {/* Meta */}
-                  <div className="flex flex-wrap gap-x-5 gap-y-1 text-xs text-gray-400 mb-4">
+                  <div className="flex flex-wrap gap-x-5 gap-y-1 text-xs text-gray-400 mb-3">
                     <span className="flex items-center gap-1.5">
                       <CalendarDays size={12} />
                       {exp.period}
@@ -105,10 +114,6 @@ export default function Timeline() {
                       {exp.type}
                     </span>
                   </div>
-
-                  <p className="text-gray-600 text-sm leading-[1.7] mb-5">
-                    {ex.descriptions[i]}
-                  </p>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2">

@@ -22,9 +22,8 @@ export const t = {
     about: {
       eyebrow: "About",
       heading: "Who I am",
-      bio1: "I'm a Full Stack Software Engineer from Costa Rica with 4 years of experience turning complex problems into tools that genuinely help people. I've worked at the intersection of data migration, delivery logistics, and professional services — always aiming for the same north star:",
+      bio1: "I'm a Full Stack Software Engineer from Costa Rica, building software that serves people and creates real opportunity — always guided by the same principle:",
       quote: "Do what is right!",
-      bio2: "From building the first food delivery platform for Costa Rica's Caribbean coast, to helping enterprises modernize petabytes of data at Snowflake — I look for the projects where the work creates real opportunity.",
       values: [
         { label: "People-first", desc: "Every line of code should serve a human purpose" },
         { label: "Impact-driven", desc: "Build where the work creates real opportunity" },
@@ -34,11 +33,6 @@ export const t = {
     experience: {
       eyebrow: "Experience",
       heading: "Career timeline",
-      descriptions: [
-        "Developed software that helps users manage the migration of their SQL code to Snowflake SQL. Contributed to the SnowConvert toolchain used by enterprises worldwide to accelerate cloud data transformation.",
-        "Developed tooling to help users migrate SQL codebases to Snowflake SQL. Transitioned into Snowflake as part of the team acquisition, carrying the same product forward.",
-        "Started my professional journey contributing to SQL migration tooling, learning modern engineering practices in a fast-moving product environment.",
-      ],
     },
     skills: {
       eyebrow: "Skills",
@@ -104,9 +98,8 @@ export const t = {
     about: {
       eyebrow: "Sobre mí",
       heading: "Quién soy",
-      bio1: "Soy un Ingeniero de Software Full Stack de Costa Rica con 4 años de experiencia convirtiendo problemas complejos en herramientas que realmente ayudan a las personas. He trabajado en la intersección de la migración de datos, la logística de entregas y los servicios profesionales — siempre apuntando al mismo norte:",
+      bio1: "Soy un Ingeniero de Software Full Stack de Costa Rica, construyendo software que sirve a las personas y crea oportunidades reales — siempre guiado por el mismo principio:",
       quote: "¡Haz lo correcto!",
-      bio2: "Desde construir la primera plataforma de delivery para la costa caribeña de Costa Rica, hasta ayudar a empresas a modernizar petabytes de datos en Snowflake — busco los proyectos donde el trabajo crea oportunidades reales.",
       values: [
         { label: "Las personas primero", desc: "Cada línea de código debe tener un propósito humano" },
         { label: "Orientado al impacto", desc: "Construir donde el trabajo crea oportunidades reales" },
@@ -116,11 +109,6 @@ export const t = {
     experience: {
       eyebrow: "Experiencia",
       heading: "Trayectoria profesional",
-      descriptions: [
-        "Desarrollé software que ayuda a los usuarios a gestionar la migración de su código SQL a Snowflake SQL. Contribuí al conjunto de herramientas SnowConvert utilizado por empresas de todo el mundo para acelerar la transformación de datos en la nube.",
-        "Desarrollé herramientas para ayudar a los usuarios a migrar bases de código SQL a Snowflake SQL. Me integré a Snowflake como parte de la adquisición del equipo, continuando el mismo producto.",
-        "Inicié mi carrera profesional contribuyendo a herramientas de migración SQL, aprendiendo prácticas modernas de ingeniería en un entorno de producto ágil.",
-      ],
     },
     skills: {
       eyebrow: "Habilidades",
