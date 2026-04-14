@@ -5,8 +5,8 @@ export const t = {
     nav: {
       links: [
         { href: "#about", label: "About" },
-        { href: "#experience", label: "Experience" },
         { href: "#projects", label: "Projects" },
+        { href: "#experience", label: "Experience" },
         { href: "#contact", label: "Contact" },
       ],
     },
@@ -81,8 +81,8 @@ export const t = {
     nav: {
       links: [
         { href: "#about", label: "Sobre mí" },
-        { href: "#experience", label: "Experiencia" },
         { href: "#projects", label: "Proyectos" },
+        { href: "#experience", label: "Experiencia" },
         { href: "#contact", label: "Contacto" },
       ],
     },
