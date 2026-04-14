@@ -102,12 +102,12 @@ export const t = {
         },
         {
           id: "starter",
-          badge: "Starter",
+          badge: "Most popular",
           name: "Digital presence",
           tagline: "Your business online in 2 weeks.",
           price: "$199–$499",
           priceNote: "One-time · delivered in 1–2 weeks",
-          featured: false,
+          featured: true,
           bestFor: "Independent professionals, small local businesses, event pages",
           items: [
             "Landing page — mobile-first, fast-loading",
@@ -119,12 +119,12 @@ export const t = {
         },
         {
           id: "growth",
-          badge: "Most popular",
+          badge: "Growth",
           name: "Business growth",
           tagline: "More clients finding you, less time answering the same WhatsApp messages.",
           price: "$999–$1,999",
           priceNote: "One-time · delivered in 3–5 weeks",
-          featured: true,
+          featured: false,
           bestFor: "Restaurants, tourism, retail shops, service businesses",
           items: [
             "Multi-page website with CMS (editable by you)",
@@ -289,12 +289,12 @@ export const t = {
         },
         {
           id: "starter",
-          badge: "Starter",
+          badge: "Más popular",
           name: "Presencia digital",
           tagline: "Tu negocio en línea en 2 semanas.",
           price: "$199–$499",
           priceNote: "Pago único · entrega en 1–2 semanas",
-          featured: false,
+          featured: true,
           bestFor: "Profesionales independientes, negocios locales, páginas de eventos",
           items: [
             "Landing page — mobile-first, carga rápida",
@@ -306,12 +306,12 @@ export const t = {
         },
         {
           id: "growth",
-          badge: "Más popular",
+          badge: "Crecimiento",
           name: "Crecimiento empresarial",
           tagline: "Más clientes encontrándote, menos tiempo respondiendo los mismos mensajes de WhatsApp.",
           price: "$999–$1,999",
           priceNote: "Pago único · entrega en 3–5 semanas",
-          featured: true,
+          featured: false,
           bestFor: "Restaurantes, turismo, tiendas, negocios de servicios",
           items: [
             "Sitio web multipágina con CMS (editable por vos)",

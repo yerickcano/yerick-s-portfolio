@@ -61,12 +61,17 @@ export default function Packages() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`glass rounded-2xl flex flex-col ${
+              className={`glass rounded-2xl flex flex-col relative ${
                 pkg.featured
-                  ? "py-8 px-6 ring-2 ring-blue-400/60"
+                  ? "py-10 px-6 ring-2 ring-green-400/70 shadow-2xl shadow-green-100/80 lg:scale-105 z-10"
                   : "py-6 px-6"
               }`}
             >
+              {/* Featured top accent bar */}
+              {pkg.featured && (
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-emerald-400 rounded-t-2xl" />
+              )}
+
               {/* Badge */}
               <span
                 className={`self-start text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full mb-4 ${
