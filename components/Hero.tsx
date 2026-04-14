@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { useLang } from "@/context/LangContext";
 
 export default function Hero() {
@@ -86,7 +87,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.92, x: 20 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="order-1 lg:order-2 flex-shrink-0 flex justify-center"
+          className="order-1 lg:order-2 flex-shrink-0 flex flex-col items-center gap-6"
         >
           <div className="relative">
             {/* Outer glass frame */}
@@ -123,6 +124,26 @@ export default function Hero() {
               }}
             />
           </div>
+
+          {/* WhatsApp quick-contact — mobile only */}
+          <a
+            href="https://wa.me/50687571891"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="lg:hidden flex items-center gap-4 p-4 rounded-xl bg-white/50 border border-white/80 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group text-gray-500 hover:text-[#25D366] w-full max-w-[17rem]"
+          >
+            <div className="w-10 h-10 rounded-lg glass flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-200">
+              <FaWhatsapp size={17} />
+            </div>
+            <div className="min-w-0">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-0.5">
+                WhatsApp
+              </p>
+              <p className="text-sm font-semibold truncate text-gray-700 group-hover:text-current transition-colors">
+                +506 8757 1891
+              </p>
+            </div>
+          </a>
         </motion.div>
       </div>
 
