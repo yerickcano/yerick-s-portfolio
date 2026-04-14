@@ -64,6 +64,12 @@ export const t = {
             "A polished personal website tailored for accountants and professionals. Clean, trustworthy, and conversion-focused — the digital business card for individuals who care about first impressions.",
           linkLabel: null,
         },
+        {
+          tagline: "Modern bus schedules for the Caribbean",
+          description:
+            "The regional bus company's website had every link broken and schedules impossible to find. I rebuilt it from scratch — modern, fast, and actually usable. 500 users showed up on day one.",
+          linkLabel: "Visit buscaribe.vercel.app",
+        },
       ],
     },
     contact: {
@@ -250,6 +256,12 @@ export const t = {
           description:
             "Un sitio web personal refinado diseñado para contadores y profesionales. Limpio, confiable y orientado a la conversión — la tarjeta de presentación digital para personas que cuidan su primera impresión.",
           linkLabel: null,
+        },
+        {
+          tagline: "Horarios de bus modernos para el Caribe",
+          description:
+            "El sitio de la empresa de buses tenía todos los enlaces rotos y era imposible encontrar horarios. Lo reconstruí desde cero — moderno, rápido y realmente usable. 500 usuarios llegaron el primer día.",
+          linkLabel: "Visitar buscaribe.vercel.app",
         },
       ],
     },

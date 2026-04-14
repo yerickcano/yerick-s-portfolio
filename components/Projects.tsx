@@ -26,6 +26,13 @@ const projectsMeta = [
     featured: false,
     status: "private" as const,
   },
+  {
+    title: "BusCaribe",
+    link: "https://buscaribe.vercel.app/",
+    tags: ["Next.js", "Community", "Public Service", "Costa Rica"],
+    featured: false,
+    status: "live" as const,
+  },
 ];
 
 const fadeUp = (delay = 0) => ({
