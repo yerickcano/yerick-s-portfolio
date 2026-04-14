@@ -23,6 +23,7 @@ type Addon = {
 };
 
 const badgeClasses: Record<string, string> = {
+  basic: "bg-gray-100 text-gray-700",
   starter: "bg-green-100 text-green-800",
   growth: "bg-blue-100 text-blue-800",
   pro: "bg-amber-100 text-amber-800",
@@ -52,7 +53,7 @@ export default function Packages() {
         </motion.div>
 
         {/* Package cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {(pk.packages as unknown as Package[]).map((pkg, i) => (
             <motion.div
               key={pkg.id}

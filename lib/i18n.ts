@@ -84,6 +84,23 @@ export const t = {
       notSureCta: "Tell me about your project",
       packages: [
         {
+          id: "basic",
+          badge: "Página Pro",
+          name: "Professional page",
+          tagline: "Your face on the internet — done tonight.",
+          price: "$99",
+          priceNote: "One-time · delivered in 24–48 hrs",
+          featured: false,
+          bestFor: "Doctors, lawyers, accountants, coaches, contractors — anyone with no online presence yet",
+          items: [
+            "Single-page site — name, photo, profession, bio",
+            "2–3 services listed clearly",
+            "WhatsApp, phone, email, location",
+            "Deployed on Vercel",
+            "No CMS — clean, fast, permanent",
+          ],
+        },
+        {
           id: "starter",
           badge: "Starter",
           name: "Digital presence",
@@ -253,6 +270,23 @@ export const t = {
       notSure: "¿No sabes cuál paquete te conviene?",
       notSureCta: "Cuéntame sobre tu proyecto",
       packages: [
+        {
+          id: "basic",
+          badge: "Página Pro",
+          name: "Página profesional",
+          tagline: "Tu presencia en internet — lista esta noche.",
+          price: "$99",
+          priceNote: "Pago único · entrega en 24–48 hrs",
+          featured: false,
+          bestFor: "Médicos, abogados, contadores, coaches, contratistas — cualquier profesional sin presencia online",
+          items: [
+            "Página de una sola pantalla — nombre, foto, profesión, bio",
+            "2–3 servicios explicados claramente",
+            "WhatsApp, teléfono, correo, ubicación",
+            "Desplegado en Vercel",
+            "Sin CMS — limpio, rápido, permanente",
+          ],
+        },
         {
           id: "starter",
           badge: "Starter",
