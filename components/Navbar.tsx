@@ -80,7 +80,7 @@ export default function Navbar() {
           </button>
         </nav>
 
-        {/* Mobile: lang toggle + hamburger */}
+        {/* Mobile: lang toggle + share + hamburger */}
         <div className="md:hidden flex items-center gap-2">
           <button
             onClick={toggle}
@@ -88,6 +88,13 @@ export default function Navbar() {
             aria-label="Toggle language"
           >
             {lang === "en" ? "ES" : "EN"}
+          </button>
+          <button
+            onClick={() => setShareOpen(true)}
+            className="p-2 rounded-lg border border-gray-200 text-gray-500 hover:text-cr-red hover:border-cr-red/40 hover:bg-cr-red/5 transition-all duration-200"
+            aria-label="Share site"
+          >
+            <ShareIcon />
           </button>
           <button
             onClick={() => setMenuOpen((v) => !v)}
@@ -113,13 +120,6 @@ export default function Navbar() {
               {label}
             </a>
           ))}
-          <button
-            onClick={() => { closeMenu(); setShareOpen(true); }}
-            className="flex items-center gap-2 py-3 text-sm font-medium text-gray-700 hover:text-cr-red transition-colors"
-          >
-            <ShareIcon />
-            Share
-          </button>
         </div>
       )}
 
