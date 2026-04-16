@@ -3,11 +3,25 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useLang } from "@/context/LangContext";
+import ShareModal from "@/components/ShareModal";
+
+function ShareIcon() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="18" cy="5" r="3" />
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="19" r="3" />
+      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+    </svg>
+  );
+}
 
 export default function Navbar() {
   const { lang, toggle, tr } = useLang();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [shareOpen, setShareOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -54,6 +68,16 @@ export default function Navbar() {
           >
             {lang === "en" ? "ES" : "EN"}
           </button>
+
+          {/* Share button */}
+          <button
+            onClick={() => setShareOpen(true)}
+            className="ml-1 flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border border-gray-200 text-gray-500 hover:text-cr-red hover:border-cr-red/40 hover:bg-cr-red/5 transition-all duration-200"
+            aria-label="Share site"
+          >
+            <ShareIcon />
+            Share
+          </button>
         </nav>
 
         {/* Mobile: lang toggle + hamburger */}
@@ -89,8 +113,17 @@ export default function Navbar() {
               {label}
             </a>
           ))}
+          <button
+            onClick={() => { closeMenu(); setShareOpen(true); }}
+            className="flex items-center gap-2 py-3 text-sm font-medium text-gray-700 hover:text-cr-red transition-colors"
+          >
+            <ShareIcon />
+            Share
+          </button>
         </div>
       )}
+
+      {shareOpen && <ShareModal onClose={() => setShareOpen(false)} />}
     </header>
   );
 }
