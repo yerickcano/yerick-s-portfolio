@@ -3,8 +3,9 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { QRCodeSVG } from "qrcode.react";
+import { useLang } from "@/context/LangContext";
 
-const SHARE_URL = "https://yerickcano.vercel.app/";
+const SHARE_URL = "https://www.yerick.me";
 
 function CopyIcon() {
   return (
@@ -52,6 +53,8 @@ interface ShareModalProps {
 }
 
 function ModalContent({ onClose }: ShareModalProps) {
+  const { tr } = useLang();
+  const share = tr.nav.share;
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
@@ -94,7 +97,7 @@ function ModalContent({ onClose }: ShareModalProps) {
       >
         {/* Header */}
         <div className="flex items-center justify-between">
-          <span className="text-gray-900 font-semibold text-base">Share</span>
+          <span className="text-gray-900 font-semibold text-base">{share.title}</span>
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-gray-700 transition-colors p-1 rounded-lg hover:bg-black/5"
@@ -132,7 +135,7 @@ function ModalContent({ onClose }: ShareModalProps) {
             style={{ color: copied ? "#16a34a" : "#CE1126" }}
           >
             {copied ? <CheckIcon /> : <CopyIcon />}
-            {copied ? "Copied!" : "Copy link"}
+            {copied ? share.copied : share.copyLink}
           </span>
         </button>
       </div>

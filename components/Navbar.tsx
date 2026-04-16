@@ -76,7 +76,7 @@ export default function Navbar() {
             aria-label="Share site"
           >
             <ShareIcon />
-            Share
+            {tr.nav.share.button}
           </button>
         </nav>
 

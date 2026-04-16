@@ -10,6 +10,12 @@ export const t = {
         { href: "#experience", label: "Experience" },
         { href: "#contact", label: "Contact" },
       ],
+      share: {
+        button: "Share",
+        title: "Share",
+        copyLink: "Copy link",
+        copied: "Copied!",
+      },
     },
     hero: {
       role: "Full Stack Software Engineer",
@@ -203,6 +209,12 @@ export const t = {
         { href: "#experience", label: "Experiencia" },
         { href: "#contact", label: "Contacto" },
       ],
+      share: {
+        button: "Compartir",
+        title: "Compartir",
+        copyLink: "Copiar enlace",
+        copied: "¡Copiado!",
+      },
     },
     hero: {
       role: "Ingeniero de Software Full Stack",
