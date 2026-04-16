@@ -73,9 +73,9 @@ function ModalContent({ onClose }: ShareModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-[60] flex items-center justify-center"
+      className="fixed inset-0 z-[60] flex items-center justify-center px-4"
       style={{
-        background: "rgba(0,0,0,0.6)",
+        background: "rgba(0,0,0,0.4)",
         backdropFilter: "blur(6px)",
         WebkitBackdropFilter: "blur(6px)",
       }}
@@ -84,9 +84,9 @@ function ModalContent({ onClose }: ShareModalProps) {
       <div
         className="w-full max-w-xs rounded-2xl p-6 flex flex-col gap-5"
         style={{
-          background: "rgba(15,25,50,0.85)",
-          border: "1px solid rgba(255,255,255,0.12)",
-          boxShadow: "0 8px 40px rgba(0,0,0,0.5)",
+          background: "rgba(255,255,255,0.82)",
+          border: "1px solid rgba(255,255,255,0.9)",
+          boxShadow: "0 8px 32px rgba(0,0,0,0.10), 0 1px 0 rgba(255,255,255,0.9) inset",
           backdropFilter: "blur(20px)",
           WebkitBackdropFilter: "blur(20px)",
         }}
@@ -94,10 +94,10 @@ function ModalContent({ onClose }: ShareModalProps) {
       >
         {/* Header */}
         <div className="flex items-center justify-between">
-          <span className="text-white font-semibold text-base">Share</span>
+          <span className="text-gray-900 font-semibold text-base">Share</span>
           <button
             onClick={onClose}
-            className="text-white/50 hover:text-white transition-colors p-1 rounded-lg hover:bg-white/10"
+            className="text-gray-400 hover:text-gray-700 transition-colors p-1 rounded-lg hover:bg-black/5"
             aria-label="Close share modal"
           >
             <XIcon />
@@ -106,12 +106,12 @@ function ModalContent({ onClose }: ShareModalProps) {
 
         {/* QR code */}
         <div className="flex justify-center">
-          <div className="bg-white rounded-xl p-3">
+          <div className="bg-white rounded-xl p-3 shadow-sm border border-white/80">
             <QRCodeSVG
               value={SHARE_URL}
               size={176}
               bgColor="#ffffff"
-              fgColor="#0b1f40"
+              fgColor="#0d0d0d"
               level="M"
             />
           </div>
@@ -120,16 +120,16 @@ function ModalContent({ onClose }: ShareModalProps) {
         {/* Copy link button */}
         <button
           onClick={handleCopy}
-          className="w-full flex items-center justify-between px-4 py-3 rounded-xl transition-colors"
+          className="w-full flex items-center justify-between px-4 py-3 rounded-xl transition-colors hover:bg-black/5"
           style={{
-            background: "rgba(255,255,255,0.07)",
-            border: "1px solid rgba(255,255,255,0.1)",
+            background: "rgba(255,255,255,0.6)",
+            border: "1px solid rgba(255,255,255,0.85)",
           }}
         >
-          <span className="text-white/60 text-sm truncate pr-3">{truncated}</span>
+          <span className="text-gray-400 text-sm truncate pr-3">{truncated}</span>
           <span
             className="flex items-center gap-1.5 text-sm font-medium shrink-0 transition-colors"
-            style={{ color: copied ? "#34d399" : "rgba(255,255,255,0.5)" }}
+            style={{ color: copied ? "#16a34a" : "#CE1126" }}
           >
             {copied ? <CheckIcon /> : <CopyIcon />}
             {copied ? "Copied!" : "Copy link"}
