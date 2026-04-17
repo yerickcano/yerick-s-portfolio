@@ -122,6 +122,7 @@ export default function Packages() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`${pk.cta} — ${pkg.name}`}
                 className={`mt-auto flex items-center justify-center gap-2 w-full px-4 py-2.5 text-white text-sm font-semibold rounded-xl transition-all duration-200 hover:-translate-y-0.5 shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 ${
                   pkg.featured
                     ? "bg-green-500 hover:bg-green-600 shadow-green-400/35 focus-visible:outline-green-500"

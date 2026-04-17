@@ -1,26 +1,33 @@
 # Yerick Cano — Full Stack Software Engineer
 > Building software that creates real opportunities for people. Based in Costa Rica.
+Last updated: 2026-04-16
 
 ## About
-Full Stack Software Engineer with 4 years of experience.
-Specializes in: React, Next.js, TypeScript, Node.js, PostgreSQL, Tailwind CSS.
-Location: Costa Rica.
+Full Stack Software Engineer with 4 years of professional experience.
+Currently: Software Engineer at Fuller (Nov 2025–present), Limón, Costa Rica.
+Previous: Software Engineer at Snowflake (2 yrs 6 mos, Feb 2023–Jul 2025), San José, Costa Rica.
+Previous: Software Engineer at Mobilize.Net (8 mos, Jul 2022–Feb 2023), remote.
+Specializes in: React, Next.js, TypeScript, Node.js, PostgreSQL, Tailwind CSS, Supabase, Vercel.
+Speaks: Spanish (native), English (professional).
 
 ## Projects
-- Fuller (https://fuller.express): Delivery platform for Costa Rica's Caribbean coast. Created a new local economy where delivery didn't exist.
-- SnowConvert: Enterprise SQL migration tool for Snowflake. Used worldwide to accelerate cloud data transformation.
-- BusCaribe (https://buscaribe.vercel.app): Modern bus schedule app. 500 users on day one.
+- Fuller (https://fuller.express): Delivery platform for Costa Rica's Caribbean coast (Limón region). First delivery service in the region, creating a new local economy connecting restaurants, drivers, and customers. Built with React, TypeScript, Next.js, Vercel, Supabase, Railway.
+- SnowConvert (https://docs.snowflake.com/en/migrations/snowconvert-docs/overview): Enterprise SQL migration tool for Snowflake. Used by companies worldwide to migrate SQL codebases to Snowflake SQL. Contributed during 2.5 years at Snowflake/Mobilize.Net using JavaScript, React, TypeScript, SQL.
+- BusCaribe (https://buscaribe.vercel.app): Modern bus schedule app for the Caribbean coast of Costa Rica. Rebuilt broken regional transit website from scratch. Reached 500 users on launch day. Built with Next.js.
+- ProCard: Professional website template for accountants and service professionals. Private project.
 
 ## Services (https://www.yerick.me/#packages)
-Web development packages from $99 to $15,000+.
-- Página Pro ($99): Single professional page, 24–48 hr delivery
-- Digital Presence ($199–$499): Full site with Google indexing
-- Business Growth ($999–$1,999): CMS + chatbot + automation
-- Web Application ($2,999–$5,999): Custom app with auth, admin panel
-- Platform/Marketplace ($6,999–$15,000+): Full marketplace with real-time features
+Freelance web development services. All packages are one-time fees unless noted.
+- Professional Page: $99 — single-page site, 24–48 hour delivery
+- Digital Presence: $199–$499 — full site with Google indexing, delivered in 1–2 weeks
+- Business Growth: $999–$1,999 — CMS + chatbot + automation, delivered in 3–5 weeks
+- Web Application: $2,999–$5,999 — custom app with auth, admin panel, database
+- Platform/Marketplace: $6,999–$15,000+ — full marketplace with real-time features, AI, payments
+Add-ons available: monthly maintenance ($80–$200/mo), AI chatbot upgrade ($600–$1,200), Sinpe Móvil integration ($400–$800).
 
 ## Contact
 - GitHub: https://github.com/yerickcano
 - LinkedIn: https://www.linkedin.com/in/yerickcano
 - Email: yerickcanogarcia@gmail.com
 - WhatsApp: https://wa.me/50687571891
+- Website: https://www.yerick.me

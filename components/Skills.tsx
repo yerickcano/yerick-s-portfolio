@@ -23,9 +23,10 @@ export default function Skills() {
           transition={{ duration: 0.55 }}
           className="glass rounded-2xl p-8"
         >
-          <p className="text-cr-red font-semibold text-xs tracking-[0.2em] uppercase mb-6">
+          <p className="text-cr-red font-semibold text-xs tracking-[0.2em] uppercase mb-2">
             {sk.eyebrow}
           </p>
+          <h2 className="sr-only">{sk.heading}</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {skillGroups.map((skills, gi) => (

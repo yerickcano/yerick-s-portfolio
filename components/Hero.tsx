@@ -40,6 +40,7 @@ export default function Hero() {
             Yerick
             <br />
             <span className="text-cr-red">Cano</span>
+            <span className="sr-only"> — {h.role}</span>
           </motion.h1>
 
           <motion.blockquote

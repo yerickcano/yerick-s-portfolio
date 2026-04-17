@@ -43,6 +43,7 @@ export const t = {
     },
     skills: {
       eyebrow: "Skills",
+      heading: "Technical Skills",
       groupLabels: ["Frontend", "Backend", "Tools"],
     },
     projects: {
@@ -242,6 +243,7 @@ export const t = {
     },
     skills: {
       eyebrow: "Habilidades",
+      heading: "Habilidades técnicas",
       groupLabels: ["Frontend", "Backend", "Herramientas"],
     },
     projects: {
