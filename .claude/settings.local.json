@@ -22,7 +22,8 @@
       "Bash(python:*)",
       "WebFetch(domain:www.yerick.me)",
       "WebSearch",
-      "Bash(npm uninstall *)"
+      "Bash(npm uninstall *)",
+      "Bash(npm audit *)"
     ]
   }
 }
