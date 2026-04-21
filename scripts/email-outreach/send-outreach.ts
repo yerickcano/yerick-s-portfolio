@@ -83,6 +83,7 @@ function buildHtml(hotel: HotelRow): string {
     '<strong>Yerick Cano García</strong><br>',
     '<span style="color:#555;">Software Engineer | Web Developer</span><br>',
     '<span style="color:#555;">San José, Costa Rica</span><br>',
+    '<a href="https://wa.me/50687571891" style="color:#25D366;">WhatsApp: +506 8757-1891</a><br>',
     '<a href="https://www.yerick.me" style="color:#c00;">www.yerick.me</a></p>',
     '<hr style="border:none;border-top:1px solid #eee;margin-top:32px;">',
     '<p style="font-size:11px;color:#999;">Si no desea recibir más correos de mi parte, responda con "no gracias" y lo eliminaré de mi lista de inmediato.</p>',
