@@ -1,5 +1,5 @@
-import 'dotenv/config';
 import { makeWASocket, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion } from 'baileys';
+import qrcode from 'qrcode-terminal';
 import { Boom } from '@hapi/boom';
 import fs from 'fs';
 import path from 'path';
@@ -121,29 +121,40 @@ async function connectWhatsApp() {
   const { version } = await fetchLatestBaileysVersion();
 
   return new Promise((resolve, reject) => {
-    const sock = makeWASocket({
-      version,
-      auth: state,
-      printQRInTerminal: true,
-      browser: ['OutreachBot', 'Chrome', '1.0.0'],
-    });
+    function createSocket() {
+      const sock = makeWASocket({
+        version,
+        auth: state,
+        printQRInTerminal: false,
+        browser: ['OutreachBot', 'Chrome', '1.0.0'],
+      });
 
-    sock.ev.on('creds.update', saveCreds);
+      sock.ev.on('creds.update', saveCreds);
 
-    sock.ev.on('connection.update', ({ connection, lastDisconnect }) => {
-      if (connection === 'open') {
-        console.log('[outreach] WhatsApp connected.\n');
-        resolve(sock);
-      }
-      if (connection === 'close') {
-        const code = new Boom(lastDisconnect?.error)?.output?.statusCode;
-        if (code === DisconnectReason.loggedOut) {
-          reject(new Error('Logged out — delete auth_info_outreach and re-run.'));
-        } else {
-          reject(new Error(`Connection closed (${code})`));
+      sock.ev.on('connection.update', ({ connection, lastDisconnect, qr }) => {
+        if (qr) {
+          console.log('\nScan this QR code with WhatsApp → Linked Devices:\n');
+          qrcode.generate(qr, { small: true });
         }
-      }
-    });
+        if (connection === 'open') {
+          console.log('[outreach] WhatsApp connected.\n');
+          resolve(sock);
+        }
+        if (connection === 'close') {
+          const code = new Boom(lastDisconnect?.error)?.output?.statusCode;
+          if (code === DisconnectReason.loggedOut) {
+            reject(new Error('Logged out — delete auth_info_outreach and re-run.'));
+          } else if (code === DisconnectReason.restartRequired || code === 515) {
+            console.log('[outreach] Restarting connection...');
+            createSocket();
+          } else {
+            reject(new Error(`Connection closed (${code})`));
+          }
+        }
+      });
+    }
+
+    createSocket();
   });
 }
 
