@@ -221,6 +221,15 @@ async function main() {
     const timestamp = new Date().toISOString();
 
     try {
+      const lookup = await sock.onWhatsApp(jid);
+      const exists = Array.isArray(lookup) && lookup[0]?.exists === true;
+
+      if (!exists) {
+        console.log(`[outreach] — Skipped ${lead.name} (${number}): not on WhatsApp`);
+        appendLog({ name: lead.name, mobile: number, message_version: lead.version, status: 'not_on_wa', timestamp });
+        continue;
+      }
+
       await sock.sendMessage(jid, { text: lead.text });
       console.log(`[outreach] ✓ Sent to ${lead.name} (${number}) — Version ${lead.version}`);
       appendLog({ name: lead.name, mobile: number, message_version: lead.version, status: 'sent', timestamp });
