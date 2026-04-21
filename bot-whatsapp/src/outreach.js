@@ -73,10 +73,26 @@ function buildMessage(lead) {
   };
 }
 
-function formatJID(mobile) {
-  const digits = String(mobile).replace(/\D/g, '');
+function formatJID(raw) {
+  const digits = String(raw).replace(/\D/g, '');
   const number = digits.length === 8 ? `506${digits}` : digits;
   return `${number}@s.whatsapp.net`;
+}
+
+// Returns deduplicated list of { number, jid } for a lead (whatsapp + mobile columns).
+function getNumbers(lead) {
+  const seen = new Set();
+  const out = [];
+  for (const raw of [lead.whatsapp, lead.mobile]) {
+    if (!raw) continue;
+    const digits = raw.replace(/\D/g, '');
+    if (!digits) continue;
+    const number = digits.length === 8 ? `506${digits}` : digits;
+    if (seen.has(number)) continue;
+    seen.add(number);
+    out.push({ number, jid: `${number}@s.whatsapp.net` });
+  }
+  return out;
 }
 
 function todaySentCount() {
@@ -139,12 +155,13 @@ async function main() {
     process.exit(1);
   }
 
-  const rows = parseCSV(CSV_FILE).filter(r => r.mobile);
+  const rows = parseCSV(CSV_FILE).filter(r => r.whatsapp || r.mobile);
   if (!rows.length) {
-    console.log('[outreach] No leads with a mobile number found.');
+    console.log('[outreach] No leads with a whatsapp or mobile number found.');
     process.exit(0);
   }
 
+  // Expand each lead into individual sends (one per number), respecting daily limit.
   const leads = rows.map(r => ({ ...r, ...buildMessage(r) }));
   const alreadySent = todaySentCount();
   const remaining = DAILY_LIMIT - alreadySent;
@@ -154,20 +171,28 @@ async function main() {
     process.exit(0);
   }
 
-  const toSend = leads.slice(0, remaining);
+  // Flat list of sends: { lead, number, jid }
+  const allSends = [];
+  for (const lead of leads) {
+    for (const num of getNumbers(lead)) {
+      allSends.push({ lead, ...num });
+    }
+  }
+  const toSend = allSends.slice(0, remaining);
 
   console.log('\n=== Outreach Summary ===');
   console.log(`CSV            : ${CSV_FILE}`);
   console.log(`Total leads    : ${leads.length}`);
+  console.log(`Total sends    : ${allSends.length} (leads × numbers)`);
   console.log(`Sent today     : ${alreadySent}`);
   console.log(`Will send      : ${toSend.length} (cap: ${DAILY_LIMIT}/day)`);
-  console.log(`  Version A (no website) : ${toSend.filter(l => l.version === 'A').length}`);
-  console.log(`  Version B (has website): ${toSend.filter(l => l.version === 'B').length}`);
-  console.log('\nLeads:');
-  toSend.forEach((l, i) =>
-    console.log(`  ${String(i + 1).padStart(2)}. [${l.version}] ${l.name} — ${l.mobile}`)
+  console.log(`  Version A (no website) : ${toSend.filter(s => s.lead.version === 'A').length}`);
+  console.log(`  Version B (has website): ${toSend.filter(s => s.lead.version === 'B').length}`);
+  console.log('\nQueue:');
+  toSend.forEach((s, i) =>
+    console.log(`  ${String(i + 1).padStart(2)}. [${s.lead.version}] ${s.lead.name} — ${s.number}`)
   );
-  console.log('\nDelay between messages: 30–60 min random');
+  console.log('\nDelay between sends: 30–60 min random');
   console.log('========================\n');
 
   const answer = await ask('Proceed? (Y/N): ');
@@ -181,18 +206,17 @@ async function main() {
 
   let sent = 0;
   for (let i = 0; i < toSend.length; i++) {
-    const lead = toSend[i];
-    const jid = formatJID(lead.mobile);
+    const { lead, number, jid } = toSend[i];
     const timestamp = new Date().toISOString();
 
     try {
       await sock.sendMessage(jid, { text: lead.text });
-      console.log(`[outreach] ✓ Sent to ${lead.name} (${lead.mobile}) — Version ${lead.version}`);
-      appendLog({ name: lead.name, mobile: lead.mobile, message_version: lead.version, status: 'sent', timestamp });
+      console.log(`[outreach] ✓ Sent to ${lead.name} (${number}) — Version ${lead.version}`);
+      appendLog({ name: lead.name, mobile: number, message_version: lead.version, status: 'sent', timestamp });
       sent++;
     } catch (err) {
-      console.error(`[outreach] ✗ Failed: ${lead.name} (${lead.mobile}) —`, err.message);
-      appendLog({ name: lead.name, mobile: lead.mobile, message_version: lead.version, status: 'failed', timestamp });
+      console.error(`[outreach] ✗ Failed: ${lead.name} (${number}) —`, err.message);
+      appendLog({ name: lead.name, mobile: number, message_version: lead.version, status: 'failed', timestamp });
     }
 
     if (alreadySent + sent >= DAILY_LIMIT) {
