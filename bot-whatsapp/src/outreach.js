@@ -95,6 +95,22 @@ function getNumbers(lead) {
   return out;
 }
 
+// Returns a Set of numbers (e.g. "50687337342") that were successfully sent to at any point.
+// Failed entries are NOT included so they remain in the queue for retry.
+function loadSentNumbers() {
+  if (!fs.existsSync(LOG_FILE)) return new Set();
+  const lines = fs.readFileSync(LOG_FILE, 'utf8').split(/\r?\n/).slice(1).filter(Boolean);
+  const sent = new Set();
+  for (const line of lines) {
+    const cols = parseCSVLine(line);
+    // cols: name, mobile, message_version, status, timestamp
+    const number = (cols[1] ?? '').replace(/"/g, '').trim();
+    const status = (cols[3] ?? '').replace(/"/g, '').trim();
+    if (status === 'sent') sent.add(number);
+  }
+  return sent;
+}
+
 function todaySentCount() {
   if (!fs.existsSync(LOG_FILE)) return 0;
   const today = new Date().toISOString().slice(0, 10);
@@ -158,6 +174,24 @@ async function connectWhatsApp() {
   });
 }
 
+const CONNECTION_ERRORS = ['Connection Closed', 'timed out', 'connection errored', 'ECONNRESET'];
+
+function isConnectionError(err) {
+  return CONNECTION_ERRORS.some(msg => err?.message?.includes(msg));
+}
+
+// Reconnects sockRef.current on connection errors, then retries the operation once.
+async function withReconnect(sockRef, fn) {
+  try {
+    return await fn(sockRef.current);
+  } catch (err) {
+    if (!isConnectionError(err)) throw err;
+    console.log('[outreach] Connection dropped — reconnecting...');
+    sockRef.current = await connectWhatsApp();
+    return await fn(sockRef.current);
+  }
+}
+
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -172,30 +206,34 @@ async function main() {
     process.exit(0);
   }
 
-  // Expand each lead into individual sends (one per number), respecting daily limit.
-  const leads = rows.map(r => ({ ...r, ...buildMessage(r) }));
-  const alreadySent = todaySentCount();
-  const remaining = DAILY_LIMIT - alreadySent;
+  const alreadySentNumbers = loadSentNumbers();
+  const alreadySentToday = todaySentCount();
+  const remaining = DAILY_LIMIT - alreadySentToday;
 
   if (remaining <= 0) {
     console.log('[outreach] Daily limit of 50 messages already reached today. Exiting.');
     process.exit(0);
   }
 
-  // Flat list of sends: { lead, number, jid }
+  const leads = rows.map(r => ({ ...r, ...buildMessage(r) }));
+
+  // Flat list of sends, skipping numbers already successfully sent (any day).
   const allSends = [];
   for (const lead of leads) {
     for (const num of getNumbers(lead)) {
+      if (alreadySentNumbers.has(num.number)) continue;
       allSends.push({ lead, ...num });
     }
   }
+
   const toSend = allSends.slice(0, remaining);
 
   console.log('\n=== Outreach Summary ===');
   console.log(`CSV            : ${CSV_FILE}`);
   console.log(`Total leads    : ${leads.length}`);
-  console.log(`Total sends    : ${allSends.length} (leads × numbers)`);
-  console.log(`Sent today     : ${alreadySent}`);
+  console.log(`Already sent   : ${alreadySentNumbers.size} number(s) (skipped)`);
+  console.log(`Remaining queue: ${allSends.length}`);
+  console.log(`Sent today     : ${alreadySentToday}`);
   console.log(`Will send      : ${toSend.length} (cap: ${DAILY_LIMIT}/day)`);
   console.log(`  Version A (no website) : ${toSend.filter(s => s.lead.version === 'A').length}`);
   console.log(`  Version B (has website): ${toSend.filter(s => s.lead.version === 'B').length}`);
@@ -213,7 +251,7 @@ async function main() {
   }
 
   console.log('\n[outreach] Connecting to WhatsApp...');
-  const sock = await connectWhatsApp();
+  const sockRef = { current: await connectWhatsApp() };
 
   let sent = 0;
   for (let i = 0; i < toSend.length; i++) {
@@ -221,7 +259,7 @@ async function main() {
     const timestamp = new Date().toISOString();
 
     try {
-      const lookup = await sock.onWhatsApp(jid);
+      const lookup = await withReconnect(sockRef, sock => sock.onWhatsApp(jid));
       const exists = Array.isArray(lookup) && lookup[0]?.exists === true;
 
       if (!exists) {
@@ -230,7 +268,7 @@ async function main() {
         continue;
       }
 
-      await sock.sendMessage(jid, { text: lead.text });
+      await withReconnect(sockRef, sock => sock.sendMessage(jid, { text: lead.text }));
       console.log(`[outreach] ✓ Sent to ${lead.name} (${number}) — Version ${lead.version}`);
       appendLog({ name: lead.name, mobile: number, message_version: lead.version, status: 'sent', timestamp });
       sent++;
@@ -239,7 +277,7 @@ async function main() {
       appendLog({ name: lead.name, mobile: number, message_version: lead.version, status: 'failed', timestamp });
     }
 
-    if (alreadySent + sent >= DAILY_LIMIT) {
+    if (alreadySentToday + sent >= DAILY_LIMIT) {
       console.log('\n[outreach] Daily limit reached (50). Stopping.');
       break;
     }
