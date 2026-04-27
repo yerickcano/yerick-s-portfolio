@@ -1,10 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Monitor } from "lucide-react";
+import { Monitor } from "lucide-react";
 import { useLang } from "@/context/LangContext";
 import { demos } from "@/lib/demos";
+import type { Demo } from "@/lib/demos";
 import type { Lang } from "@/lib/i18n";
+import DemoModal from "@/components/DemoModal";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -16,8 +19,11 @@ const fadeUp = (delay = 0) => ({
 export default function Demos() {
   const { lang, tr } = useLang();
   const dm = tr.demos;
+  const [activeDemo, setActiveDemo] = useState<Demo | null>(null);
 
   return (
+    <>
+    <DemoModal demo={activeDemo} onClose={() => setActiveDemo(null)} />
     <section id="demos" className="py-28 px-5 sm:px-8">
       <div className="max-w-6xl mx-auto">
         <motion.div {...fadeUp()}>
@@ -65,19 +71,18 @@ export default function Demos() {
                     </span>
                   ))}
                 </div>
-                <a
-                  href={demo.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={() => setActiveDemo(demo)}
                   className="flex items-center justify-center gap-2 text-sm font-semibold text-gray-600 hover:text-cr-red glass-subtle rounded-xl px-5 py-2.5 hover:shadow-md transition-all duration-200 w-full"
                 >
-                  {dm.cta} <ExternalLink size={14} />
-                </a>
+                  {dm.cta} →
+                </button>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
+    </>
   );
 }

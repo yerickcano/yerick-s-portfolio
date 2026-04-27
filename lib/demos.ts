@@ -14,7 +14,7 @@ export const demos: Demo[] = [
       es: "Demo para clínicas dentales y odontólogos. Muestra servicios, perfil profesional, testimonios y reserva de cita vía WhatsApp.",
     },
     tags: ["Dentista", "Profesional", "Salud"],
-    url: "https://tinyurl.com/clinica-dental-demo",
+    url: "/demos/clinica-dental/",
   },
   {
     title: "Lic. Carlos Méndez — Abogado y Notario",
