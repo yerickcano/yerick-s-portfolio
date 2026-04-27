@@ -23,7 +23,7 @@ export const demos: Demo[] = [
       es: "Demo para abogados generalistas. Incluye áreas de práctica, proceso de trabajo, FAQ legal y consulta inicial gratuita vía WhatsApp.",
     },
     tags: ["Abogado", "Profesional", "Servicios legales"],
-    url: "https://tinyurl.com/abogado-demo",
+    url: "/demos/abogado/",
   },
   {
     title: "Tico Wild Tours",
@@ -32,7 +32,7 @@ export const demos: Demo[] = [
       es: "Demo para agencias de turismo y tours. Muestra experiencias, galería, reseñas verificadas y reserva directa por WhatsApp.",
     },
     tags: ["Turismo", "Tours", "Negocio local"],
-    url: "https://tinyurl.com/agencia-de-turismo-cr",
+    url: "/demos/tour-agency/",
   },
   {
     title: "Aura Studio CR",
@@ -41,6 +41,6 @@ export const demos: Demo[] = [
       es: "Demo para marcas de belleza y productos femeninos. Presenta colección, servicios, comunidad y una identidad de marca editorial completa.",
     },
     tags: ["Belleza", "Productos", "Negocio local"],
-    url: "https://tinyurl.com/tienda-de-cosmeticos",
+    url: "/demos/belleza/",
   },
 ];

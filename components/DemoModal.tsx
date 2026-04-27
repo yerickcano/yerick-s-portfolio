@@ -41,7 +41,7 @@ export default function DemoModal({ demo, onClose }: Props) {
             initial={{ y: -16, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.22, delay: 0.05 }}
-            className="flex items-center justify-between px-5 py-3 bg-white/95 backdrop-blur border-b border-gray-200 shrink-0"
+            className="flex items-center justify-between px-5 py-1 bg-white/95 backdrop-blur border-b border-gray-200 shrink-0"
             onClick={(e) => e.stopPropagation()}
           >
             <span className="font-semibold text-gray-900 text-sm">{demo.title}</span>
