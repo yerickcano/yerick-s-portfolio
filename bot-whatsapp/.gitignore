@@ -1,7 +1,0 @@
-node_modules
-dist
-.env
-npm-debug.log*
-*_sessions
-*.log
-auth_info_outreach
