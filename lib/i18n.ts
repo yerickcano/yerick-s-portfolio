@@ -6,6 +6,7 @@ export const t = {
       links: [
         { href: "#about", label: "About" },
         { href: "#projects", label: "Projects" },
+        { href: "#demos", label: "Demos" },
         { href: "#packages", label: "Packages" },
         { href: "#experience", label: "Experience" },
         { href: "#contact", label: "Contact" },
@@ -78,6 +79,12 @@ export const t = {
           linkLabel: "Visit buscaribe.vercel.app",
         },
       ],
+    },
+    demos: {
+      eyebrow: "Live Demos",
+      heading: "Demos en vivo",
+      subtitle: "Real sites built for real people — see what a finished deliverable looks like.",
+      cta: "View demo",
     },
     contact: {
       eyebrow: "Contact",
@@ -206,6 +213,7 @@ export const t = {
       links: [
         { href: "#about", label: "Sobre mí" },
         { href: "#projects", label: "Proyectos" },
+        { href: "#demos", label: "Demos" },
         { href: "#packages", label: "Paquetes" },
         { href: "#experience", label: "Experiencia" },
         { href: "#contact", label: "Contacto" },
@@ -278,6 +286,12 @@ export const t = {
           linkLabel: "Visitar buscaribe.vercel.app",
         },
       ],
+    },
+    demos: {
+      eyebrow: "Demos en vivo",
+      heading: "Demos en vivo",
+      subtitle: "Sitios reales construidos para personas reales — mirá cómo luce un entregable terminado.",
+      cta: "Ver demo",
     },
     contact: {
       eyebrow: "Contacto",
