@@ -75,7 +75,7 @@ export default function DemoModal({ demo, onClose }: Props) {
           >
             <iframe
               src={demo.url}
-              title={demo.title}
+              title="Demo"
               className="w-full h-full border-0"
               loading="lazy"
             />
